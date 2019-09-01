@@ -59,25 +59,27 @@ class ViewController: UIViewController {
 
     @IBAction func timeButtonTapped(_ sender: UIButton) {
         
-        if sender.tag == 10 {
-            
-            count = 600
-            
-        } else if sender.tag == 15 {
+        if sender.tag == 15 {
             
             count = 900
             
-        } else if sender.tag == 20 {
+        } else if sender.tag == 30 {
             
-            count = 1200
+            count = 1800
             
-        } else if sender.tag == 25 {
+        } else if sender.tag == 45 {
             
-            count = 1500
+            count = 2700
             
         } else if sender.tag == 60 {
             
             count = 3600
+            
+        } else if sender.tag == 61 {
+            
+            // User wants no time limit
+            timer?.invalidate()
+            timerLabel.text = "00:00"
             
         }
         
