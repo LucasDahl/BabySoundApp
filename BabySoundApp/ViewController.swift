@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     // Properties
     var timer:Timer?
-    var seconds = 3600
+    var count = 3600
     
     // IBOutlets
     @IBOutlet weak var timerLabel: UILabel!
@@ -34,18 +34,20 @@ class ViewController: UIViewController {
     //================
     @objc func timerElapsed() {
         
-        seconds -= 1
-        
-        // Set the label
-        timerLabel.text = "\(seconds)"
-        
-        // When the timer has reached 0
-        if seconds <= 0 {
+        // Decrease seconds
+//        seconds -= 1
+//        let test = String(format: "%4.f", seconds / 60)
+//        //let minutes = (seconds  % 3600) % 60
 
-            // Stop the timer
-            timer?.invalidate()
-            timerLabel.textColor = UIColor.red
-
+        
+        if count > 0 {
+            
+            // Create the properties for minutes and seconds
+            let minutes = String(count / 60)
+            let seconds = String(count % 60)
+            timerLabel.text = minutes + ":" + seconds
+            count -= 1
+            
         }
     
     }
