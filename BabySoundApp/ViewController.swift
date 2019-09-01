@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     // Properties
     var timer:Timer?
-    var count = 3600
+    var count = 0
     
     // IBOutlets
     @IBOutlet weak var timerLabel: UILabel!
@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         
         // Create the timer
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
-        
+
         // This allows the timer to work while scrolling
         RunLoop.main.add(timer!, forMode: RunLoop.Mode.common)
         
@@ -44,19 +44,43 @@ class ViewController: UIViewController {
             
             // Create the properties for minutes and seconds
             let minutes = String(count / 60)
-            let seconds = String(count % 60)
-            timerLabel.text = minutes + ":" + seconds
+            let seconds = String(format: ":%02i", (count % 60))
+            timerLabel.text = minutes + seconds
             count -= 1
             
         }
     
     }
     
+    
     //==================
     // MARK: - IBActions
     //==================
 
     @IBAction func timeButtonTapped(_ sender: UIButton) {
+        
+        if sender.tag == 10 {
+            
+            count = 600
+            
+        } else if sender.tag == 15 {
+            
+            count = 900
+            
+        } else if sender.tag == 20 {
+            
+            count = 1200
+            
+        } else if sender.tag == 25 {
+            
+            count = 1500
+            
+        } else if sender.tag == 60 {
+            
+            count = 3600
+            
+        }
+        
     }
     
 }
