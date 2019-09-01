@@ -34,12 +34,7 @@ class ViewController: UIViewController {
     //================
     @objc func timerElapsed() {
         
-        // Decrease seconds
-//        seconds -= 1
-//        let test = String(format: "%4.f", seconds / 60)
-//        //let minutes = (seconds  % 3600) % 60
-
-        
+        // Check to see if the count property is at zero
         if count > 0 {
             
             // Create the properties for minutes and seconds
@@ -47,6 +42,7 @@ class ViewController: UIViewController {
             let seconds = String(format: ":%02i", (count % 60))
             timerLabel.text = minutes + seconds
             count -= 1
+            // TODO: tunr off the sound
             
         }
     
