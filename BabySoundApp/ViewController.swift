@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     // IBOutlets
     @IBOutlet weak var timerLabel: UILabel!
-    @IBOutlet weak var soundSlider: UISlider!
+    @IBOutlet weak var soundBeingPlayed: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,6 +80,10 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    @IBAction func soundButton(_ sender: UIButton) {
+    }
+    
     
 }
 
