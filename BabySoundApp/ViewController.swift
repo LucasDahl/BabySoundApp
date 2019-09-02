@@ -82,6 +82,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func soundButton(_ sender: UIButton) {
+        
+        // TODO: - set the tag value of the buttons.
+        
     }
     
     
