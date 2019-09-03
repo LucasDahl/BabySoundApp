@@ -56,7 +56,7 @@ class ViewController: UIViewController {
 
     @IBAction func timeButtonTapped(_ sender: UIButton) {
         
-        if sender.tag == 15 {
+        if sender.tag == 16 {
             
             count = 10
             
@@ -91,11 +91,21 @@ class ViewController: UIViewController {
     
     @IBAction func soundButton(_ sender: UIButton) {
         
-        // TODO: - set the tag value of the buttons.
-        //TODO - add border around selected button when pressed
+        if sender.layer.borderWidth == 0 {
+            
+            sender.layer.borderColor = UIColor.black.cgColor
+            sender.layer.cornerRadius = 5
+            sender.layer.borderWidth = 3
+            
+        } else if sender.layer.borderWidth == 3 {
+            
+            sender.layer.borderWidth = 0
+            
+        }
+        
         
     }
     
     
-}
+} // End class
 
