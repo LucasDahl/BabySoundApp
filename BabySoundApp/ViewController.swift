@@ -78,6 +78,7 @@ class ViewController: UIViewController {
         
         if sender.tag == 16 {
             
+            // TODO: - Change back to ten minutes once testing is done
             count = 10
             
         } else if sender.tag == 30 {
