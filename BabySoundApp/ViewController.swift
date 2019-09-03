@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     // IBOutlets
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var soundBeingPlayed: UILabel!
+    @IBOutlet var buttonArray: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,6 +92,19 @@ class ViewController: UIViewController {
     
     @IBAction func soundButton(_ sender: UIButton) {
         
+        // Check to see if any button has already been selected
+        for button in buttonArray {
+            
+            if button.layer.borderWidth == 3 {
+                
+                button.layer.borderWidth = 0
+                // TODO: end the current sound? May need to be moved
+                
+            }
+            
+        }
+        
+        // Set the border around the selected button
         if sender.layer.borderWidth == 0 {
             
             sender.layer.borderColor = UIColor.black.cgColor
