@@ -22,18 +22,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Create the timer
-        //TODO: - add timer to a method
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
-
-        // This allows the timer to work while scrolling
-        RunLoop.main.add(timer!, forMode: RunLoop.Mode.common)
         
     }
     
     //================
     // MARK: - Methods
     //================
+    
     @objc func timerElapsed() {
         
         // Check to see if the count property is at zero
@@ -44,10 +39,31 @@ class ViewController: UIViewController {
             let seconds = String(format: ":%02i", (count % 60))
             timerLabel.text = minutes + seconds
             count -= 1
-            // TODO: tunr off the sound
+            // TODO: turn off the sound
+            
+            if count <= 0 {
+                
+                //timer.
+                timerLabel.text = "0:00"
+                
+            }
             
         }
     
+    }
+    
+    func setupTimer() {
+        
+        // Invalidate any timers that are currently running.
+        if timer != nil {
+            timer?.invalidate()
+        }
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
+        
+        // This allows the timer to work while scrolling
+        RunLoop.main.add(timer!, forMode: RunLoop.Mode.common)
+        
     }
     
     
@@ -56,6 +72,9 @@ class ViewController: UIViewController {
     //==================
 
     @IBAction func timeButtonTapped(_ sender: UIButton) {
+        
+        // Setup the timer
+        setupTimer()
         
         if sender.tag == 16 {
             
@@ -74,16 +93,8 @@ class ViewController: UIViewController {
             count = 3600
             
         } else if sender.tag == 61 {
-            //TODO does not work
-            // User wants no time limit
+            
             timer?.invalidate()
-            timerLabel.text = "00:00"
-            
-        }
-        // DOesnt work
-        if count > 0 {
-            
-            timer?.invalidate()// should bot be invalidate
             timerLabel.text = "00:00"
             
         }
