@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // Create the timer
+        //TODO: - add timer to a method
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
 
         // This allows the timer to work while scrolling
@@ -57,7 +58,7 @@ class ViewController: UIViewController {
         
         if sender.tag == 15 {
             
-            count = 900
+            count = 10
             
         } else if sender.tag == 30 {
             
@@ -72,9 +73,16 @@ class ViewController: UIViewController {
             count = 3600
             
         } else if sender.tag == 61 {
-            
+            //TODO does not work
             // User wants no time limit
             timer?.invalidate()
+            timerLabel.text = "00:00"
+            
+        }
+        // DOesnt work
+        if count > 0 {
+            
+            timer?.invalidate()// should bot be invalidate
             timerLabel.text = "00:00"
             
         }
@@ -84,6 +92,7 @@ class ViewController: UIViewController {
     @IBAction func soundButton(_ sender: UIButton) {
         
         // TODO: - set the tag value of the buttons.
+        //TODO - add border around selected button when pressed
         
     }
     
