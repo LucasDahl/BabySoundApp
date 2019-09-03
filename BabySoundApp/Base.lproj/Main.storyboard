@@ -153,9 +153,6 @@
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4aF-J7-xzk">
                                                                         <rect key="frame" x="0.0" y="0.0" width="101.5" height="108"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="74" id="BrZ-RJ-fGL"/>
-                                                                        </constraints>
                                                                         <state key="normal" image="storm"/>
                                                                         <connections>
                                                                             <action selector="soundButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="itn-lb-0We"/>
