@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
     // Properties
     var timer:Timer?
     var count = 0
+    var audioPlayer: AVAudioPlayer?
+    var soundArray = ["sound files"]
     
     // IBOutlets
     @IBOutlet weak var timerLabel: UILabel!
@@ -83,9 +86,44 @@ class ViewController: UIViewController {
         
     }
     
-    //============
-    // End Methods
-    //============
+    func playSound(_ note: String) {
+        
+        // Make a reference to the sound url
+        let soundUrl = Bundle.main.url(forResource: note, withExtension: "file type")
+        
+        // Make sure the sound url is not nil
+        guard soundUrl != nil else { return }
+        
+        do {
+            
+            // try playing the sound file
+            audioPlayer = try AVAudioPlayer(contentsOf: soundUrl!)
+            
+            // Actually play the sound
+            audioPlayer?.play()
+            
+        } catch {
+            
+            // There was an error
+            print("Error playing sound file: \(error)")
+            
+        }
+        
+    }
+    
+    func pickSound(_ button: UIButton) {
+        
+        // Get the selected button based on  its tag property, and use that tag - 1 to selcet the sound to play using the method.
+        let selectedSound = soundArray[button.tag - 1]
+        
+        // Play the sound
+        playSound(selectedSound)
+        
+    }
+    
+    //==============
+    // End - Methods
+    //==============
     
     
     //==================
@@ -177,9 +215,9 @@ class ViewController: UIViewController {
         
     }
     
-    //==============
-    // End IBActions
-    //==============
+    //================
+    // End - IBActions
+    //================
     
     
     
