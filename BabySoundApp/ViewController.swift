@@ -135,6 +135,12 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func stopSoundButton(_ sender: UIButton) {
+        
+        
+    }
+    
+    
     
 } // End class
 
