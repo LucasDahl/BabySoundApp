@@ -66,6 +66,27 @@ class ViewController: UIViewController {
         
     }
     
+    func buttonBorderSetup(button: UIButton) {
+        
+        // Set the border around the selected button
+        if button.layer.borderWidth == 0 {
+            
+            button.layer.borderColor = UIColor.black.cgColor
+            button.layer.cornerRadius = 5
+            button.layer.borderWidth = 3
+            
+        } else if button.layer.borderWidth == 3 {
+            
+            button.layer.borderWidth = 0
+            
+        }
+        
+    }
+    
+    //============
+    // End Methods
+    //============
+    
     
     //==================
     // MARK: - IBActions
@@ -122,33 +143,13 @@ class ViewController: UIViewController {
                 
             }
             
-            // Set the border around the selected button
-            if sender.layer.borderWidth == 0 {
-                
-                sender.layer.borderColor = UIColor.black.cgColor
-                sender.layer.cornerRadius = 5
-                sender.layer.borderWidth = 3
-                
-            } else if sender.layer.borderWidth == 3 {
-                
-                sender.layer.borderWidth = 0
-                
-            }
+            // Set the button border
+            buttonBorderSetup(button: sender)
             
         } else {
             
-            // Set the border around the selected button
-            if sender.layer.borderWidth == 0 {
-                
-                sender.layer.borderColor = UIColor.black.cgColor
-                sender.layer.cornerRadius = 5
-                sender.layer.borderWidth = 3
-                
-            } else if sender.layer.borderWidth == 3 {
-                
-                sender.layer.borderWidth = 0
-                
-            }
+            // Set the button border
+            buttonBorderSetup(button: sender)
             
         }
         
@@ -160,6 +161,10 @@ class ViewController: UIViewController {
         
         
     }
+    
+    //==============
+    // End IBActions
+    //==============
     
     
     
