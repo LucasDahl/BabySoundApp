@@ -172,6 +172,11 @@ class ViewController: UIViewController {
         // Check if the switch is on or not
         if multipleSoundsSwitch.isOn == true  {
             
+            // Set the button border
+            buttonBorderSetup(button: sender)
+            
+        } else {
+            
             // Check to see if any button has already been selected
             for button in buttonArray {
                 
@@ -183,11 +188,6 @@ class ViewController: UIViewController {
                 }
                 
             }
-            
-            // Set the button border
-            buttonBorderSetup(button: sender)
-            
-        } else {
             
             // Set the button border
             buttonBorderSetup(button: sender)
