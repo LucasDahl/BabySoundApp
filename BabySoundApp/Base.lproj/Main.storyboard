@@ -321,20 +321,17 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="4pw-2N-hX7">
                                                 <rect key="frame" x="8" y="5" width="388" height="35"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Sound:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cw3-0W-SBt">
-                                                        <rect key="frame" x="0.0" y="0.0" width="116.5" height="35"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multiple Sounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cw3-0W-SBt">
+                                                        <rect key="frame" x="0.0" y="0.0" width="150.5" height="35"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="playing sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3SL-KO-K1v">
-                                                        <rect key="frame" x="135.5" y="0.0" width="117" height="35"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="APq-iN-OTK">
+                                                        <rect key="frame" x="169.5" y="0.0" width="51" height="35"/>
+                                                    </switch>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wj6-ry-dY9">
-                                                        <rect key="frame" x="271.5" y="0.0" width="116.5" height="35"/>
+                                                        <rect key="frame" x="237.5" y="0.0" width="150.5" height="35"/>
                                                         <state key="normal" title="Stop Sound">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -344,7 +341,7 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="3SL-KO-K1v" firstAttribute="width" secondItem="wj6-ry-dY9" secondAttribute="width" id="ZZ0-nR-n11"/>
+                                                    <constraint firstItem="Cw3-0W-SBt" firstAttribute="width" secondItem="wj6-ry-dY9" secondAttribute="width" id="axC-sI-uq4"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
@@ -380,7 +377,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="soundBeingPlayed" destination="3SL-KO-K1v" id="43Z-aC-gos"/>
+                        <outlet property="multipleSoundsSwitch" destination="APq-iN-OTK" id="ClZ-Xf-s3y"/>
                         <outlet property="timerLabel" destination="YBP-PI-LUr" id="ImI-nW-0dh"/>
                         <outletCollection property="buttonArray" destination="moh-WY-GdR" collectionClass="NSMutableArray" id="D0v-QV-kdt"/>
                         <outletCollection property="buttonArray" destination="Ajd-cj-IYe" collectionClass="NSMutableArray" id="Bkb-AU-87v"/>
