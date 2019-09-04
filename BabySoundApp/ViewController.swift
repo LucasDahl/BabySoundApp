@@ -137,27 +137,37 @@ class ViewController: UIViewController {
         
         if sender.tag == 1 {
             
+            // The count for the timer
             count = 900
+            // Set the label
             timerLabel.text = "15:00"
             
         } else if sender.tag == 2 {
             
+            // The count for the timer
             count = 1800
+            // Set the label
             timerLabel.text = "30:00"
             
         } else if sender.tag == 3 {
             
+            // The count for the timer
             count = 2700
+            // Set the label
             timerLabel.text = "45:00"
             
         } else if sender.tag == 4 {
             
+            // The count for the timer
             count = 3600
+            // Set the label
             timerLabel.text = "60:00"
             
         } else if sender.tag == 5 {
             
+            // Stop the timer
             timer?.invalidate()
+            // Set the label
             timerLabel.text = "00:00"
             
         }
@@ -169,13 +179,13 @@ class ViewController: UIViewController {
         // TODO: refactor, plus make the sounds stop playing if they are deslected
         
         
-        // Check if the switch is on or not
+        // Check if the switch is on or not - plays multiple sounds
         if multipleSoundsSwitch.isOn == true  {
             
             // Set the button border
             buttonBorderSetup(button: sender)
             
-        } else {
+        } else { // plays one sound
             
             // Check to see if any button has already been selected
             for button in buttonArray {
@@ -183,7 +193,9 @@ class ViewController: UIViewController {
                 if button.layer.borderWidth == 3 {
                     
                     button.layer.borderWidth = 0
-                    // TODO: end the current sound? May need to be moved
+                    
+                    // Stop the sounds from being played
+                    audioPlayer?.stop()
                     
                 }
                 
@@ -193,6 +205,9 @@ class ViewController: UIViewController {
             buttonBorderSetup(button: sender)
             
         }
+        
+        // Play the sound
+        pickSound(sender)
         
     }
     
@@ -209,6 +224,9 @@ class ViewController: UIViewController {
             }
             
         }
+        
+        // Cencel the sound
+        audioPlayer?.stop()
         
         // TODO: - Cancel the the timer
         
