@@ -128,7 +128,10 @@ class ViewController: UIViewController {
     
     @IBAction func soundButton(_ sender: UIButton) {
         
+        // TODO: refactor, plus make the sounds stop playing if they are deslected
         
+        
+        // Check if the switch is on or not
         if multipleSoundsSwitch.isOn == true  {
             
             // Check to see if any button has already been selected
@@ -157,7 +160,19 @@ class ViewController: UIViewController {
     
     @IBAction func stopSoundButton(_ sender: UIButton) {
         
-        // Cancel the the timer
+        // hide all the borders
+        for button in buttonArray {
+            
+            if button.layer.borderWidth == 3 {
+                
+                button.layer.borderWidth = 0
+                // TODO: end the current sound? May need to be moved
+                
+            }
+            
+        }
+        
+        // TODO: - Cancel the the timer
         
         
     }
