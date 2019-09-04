@@ -214,7 +214,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="cNd-S3-bgX">
                                                 <rect key="frame" x="20" y="5" width="364" height="35"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="16" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpg-1w-2h5">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpg-1w-2h5">
                                                         <rect key="frame" x="0.0" y="2.5" width="47.5" height="30"/>
                                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="15'">
@@ -229,7 +229,7 @@
                                                             <action selector="timeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m9T-XL-Mw2"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GH-Lt-6Z2">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GH-Lt-6Z2">
                                                         <rect key="frame" x="63.5" y="2.5" width="47.5" height="30"/>
                                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="30'">
@@ -244,7 +244,7 @@
                                                             <action selector="timeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KAA-DA-6j4"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="45" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9K-nw-6zL">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9K-nw-6zL">
                                                         <rect key="frame" x="127" y="2.5" width="48" height="30"/>
                                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="45'">
@@ -259,7 +259,7 @@
                                                             <action selector="timeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pcn-Ak-1yb"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="60" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcL-ST-ad0">
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcL-ST-ad0">
                                                         <rect key="frame" x="191" y="2.5" width="47.5" height="30"/>
                                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="60'">
@@ -274,7 +274,7 @@
                                                             <action selector="timeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yta-TN-A4M"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="61" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Th-Dg-Kbx">
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Th-Dg-Kbx">
                                                         <rect key="frame" x="254.5" y="2.5" width="47.5" height="30"/>
                                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="♾'">

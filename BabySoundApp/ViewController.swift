@@ -76,24 +76,27 @@ class ViewController: UIViewController {
         // Setup the timer
         setupTimer()
         
-        if sender.tag == 16 {
+        if sender.tag == 1 {
             
-            // TODO: - Change back to ten minutes once testing is done
-            count = 10
+            count = 900
+            timerLabel.text = "15:00"
             
-        } else if sender.tag == 30 {
+        } else if sender.tag == 2 {
             
             count = 1800
+            timerLabel.text = "30:00"
             
-        } else if sender.tag == 45 {
+        } else if sender.tag == 3 {
             
             count = 2700
+            timerLabel.text = "45:00"
             
-        } else if sender.tag == 60 {
+        } else if sender.tag == 4 {
             
             count = 3600
+            timerLabel.text = "60:00"
             
-        } else if sender.tag == 61 {
+        } else if sender.tag == 5 {
             
             timer?.invalidate()
             timerLabel.text = "00:00"
