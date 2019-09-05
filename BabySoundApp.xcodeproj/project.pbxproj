@@ -12,6 +12,7 @@
 		95D9B6A722FF7FB0004E4BA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D9B6A522FF7FB0004E4BA4 /* Main.storyboard */; };
 		95D9B6A922FF7FB1004E4BA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95D9B6A822FF7FB1004E4BA4 /* Assets.xcassets */; };
 		95D9B6AC22FF7FB1004E4BA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D9B6AA22FF7FB1004E4BA4 /* LaunchScreen.storyboard */; };
+		95DC008B23219F21008C99BD /* Sounds.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95DC008A23219F21008C99BD /* Sounds.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		95D9B6A822FF7FB1004E4BA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95D9B6AB22FF7FB1004E4BA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95D9B6AD22FF7FB1004E4BA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95DC008A23219F21008C99BD /* Sounds.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Sounds.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				95D9B6A322FF7FB0004E4BA4 /* ViewController.swift */,
 				95D9B6A522FF7FB0004E4BA4 /* Main.storyboard */,
 				95D9B6A822FF7FB1004E4BA4 /* Assets.xcassets */,
+				95DC008A23219F21008C99BD /* Sounds.xcassets */,
 				95D9B6AA22FF7FB1004E4BA4 /* LaunchScreen.storyboard */,
 				95D9B6AD22FF7FB1004E4BA4 /* Info.plist */,
 			);
@@ -125,6 +128,7 @@
 				95D9B6AC22FF7FB1004E4BA4 /* LaunchScreen.storyboard in Resources */,
 				95D9B6A922FF7FB1004E4BA4 /* Assets.xcassets in Resources */,
 				95D9B6A722FF7FB0004E4BA4 /* Main.storyboard in Resources */,
+				95DC008B23219F21008C99BD /* Sounds.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

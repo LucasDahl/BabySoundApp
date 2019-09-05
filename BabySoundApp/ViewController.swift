@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     var timer:Timer?
     var count = 0
     var audioPlayer: AVAudioPlayer?
-    var soundArray = ["sound files"]
+    var soundArray = ["baby", "womb", "whitenoise", "dryer", "fan", "hairdryer", "car", "airplane", "train", "ocean", " nature", "fire", "fire", "storm", "rain", "shower"]
     
     // IBOutlets
     @IBOutlet weak var timerLabel: UILabel!
@@ -61,7 +61,8 @@ class ViewController: UIViewController {
             timer?.invalidate()
         }
         
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
+        
         
         // This allows the timer to work while scrolling
         RunLoop.main.add(timer!, forMode: RunLoop.Mode.common)
@@ -88,7 +89,7 @@ class ViewController: UIViewController {
     func playSound(_ note: String) {
         
         // Make a reference to the sound url
-        let soundUrl = Bundle.main.url(forResource: note, withExtension: "file type")
+        let soundUrl = Bundle.main.url(forResource: note, withExtension: ".wav")
         
         // Make sure the sound url is not nil
         guard soundUrl != nil else { return }
@@ -139,7 +140,7 @@ class ViewController: UIViewController {
             // The count for the timer
             count = 900
             // Set the label
-            timerLabel.text = "15:00"
+            //timerLabel.text = "15:00"
             
         } else if sender.tag == 2 {
             
