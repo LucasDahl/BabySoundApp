@@ -25,7 +25,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
     }
     
     //================
@@ -33,7 +32,7 @@ class ViewController: UIViewController {
     //================
     
     @objc func timerElapsed() {
-        
+        // TODO: - fixed timer, it has a delay
         // Check to see if the count property is at zero
         if count > 0 {
             
@@ -110,14 +109,14 @@ class ViewController: UIViewController {
         }
         
     }
-    
+    // TODO: - uncomment when sounds have been added
     func pickSound(_ button: UIButton) {
         
         // Get the selected button based on  its tag property, and use that tag - 1 to selcet the sound to play using the method.
-        let selectedSound = soundArray[button.tag - 1]
-        
-        // Play the sound
-        playSound(selectedSound)
+//        let selectedSound = soundArray[button.tag - 1]
+//
+//        // Play the sound
+//        playSound(selectedSound)
         
     }
     
