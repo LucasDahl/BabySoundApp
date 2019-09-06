@@ -82,6 +82,9 @@ class ViewController: UIViewController {
             
             button.layer.borderWidth = 0
             
+            // Stop anysound that is being played
+            audioPlayer?.stop()
+            
         }
         
     }
