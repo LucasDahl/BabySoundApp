@@ -14,7 +14,7 @@
 		95D9B6AC22FF7FB1004E4BA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D9B6AA22FF7FB1004E4BA4 /* LaunchScreen.storyboard */; };
 		95F8E85123229DDC00F6D76E /* carNoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95F8E84223229DD800F6D76E /* carNoise.wav */; };
 		95F8E85223229DDC00F6D76E /* oceanNoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95F8E84323229DD800F6D76E /* oceanNoise.wav */; };
-		95F8E85323229DDC00F6D76E /* airpaneNoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95F8E84423229DD800F6D76E /* airpaneNoise.wav */; };
+		95F8E85323229DDC00F6D76E /* airplaneNoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95F8E84423229DD800F6D76E /* airplaneNoise.wav */; };
 		95F8E85423229DDC00F6D76E /* fanNoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95F8E84523229DD800F6D76E /* fanNoise.wav */; };
 		95F8E85523229DDC00F6D76E /* fireNoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95F8E84623229DD900F6D76E /* fireNoise.wav */; };
 		95F8E85623229DDC00F6D76E /* rainNoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95F8E84723229DD900F6D76E /* rainNoise.wav */; };
@@ -22,7 +22,7 @@
 		95F8E85823229DDC00F6D76E /* dryerNoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95F8E84923229DD900F6D76E /* dryerNoise.wav */; };
 		95F8E85923229DDC00F6D76E /* wombNoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95F8E84A23229DD900F6D76E /* wombNoise.wav */; };
 		95F8E85A23229DDC00F6D76E /* natureNoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95F8E84B23229DDA00F6D76E /* natureNoise.wav */; };
-		95F8E85B23229DDC00F6D76E /* babyNoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95F8E84C23229DDB00F6D76E /* babyNoise.wav */; };
+		95F8E85B23229DDC00F6D76E /* babyMobileNoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95F8E84C23229DDB00F6D76E /* babyMobileNoise.wav */; };
 		95F8E85C23229DDC00F6D76E /* trainNoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95F8E84D23229DDB00F6D76E /* trainNoise.wav */; };
 		95F8E85D23229DDC00F6D76E /* whiteNoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95F8E84E23229DDB00F6D76E /* whiteNoise.wav */; };
 		95F8E85E23229DDC00F6D76E /* hairdryerNoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95F8E84F23229DDC00F6D76E /* hairdryerNoise.wav */; };
@@ -39,7 +39,7 @@
 		95D9B6AD22FF7FB1004E4BA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95F8E84223229DD800F6D76E /* carNoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = carNoise.wav; sourceTree = "<group>"; };
 		95F8E84323229DD800F6D76E /* oceanNoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = oceanNoise.wav; sourceTree = "<group>"; };
-		95F8E84423229DD800F6D76E /* airpaneNoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = airpaneNoise.wav; sourceTree = "<group>"; };
+		95F8E84423229DD800F6D76E /* airplaneNoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = airplaneNoise.wav; sourceTree = "<group>"; };
 		95F8E84523229DD800F6D76E /* fanNoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fanNoise.wav; sourceTree = "<group>"; };
 		95F8E84623229DD900F6D76E /* fireNoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fireNoise.wav; sourceTree = "<group>"; };
 		95F8E84723229DD900F6D76E /* rainNoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rainNoise.wav; sourceTree = "<group>"; };
@@ -47,7 +47,7 @@
 		95F8E84923229DD900F6D76E /* dryerNoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dryerNoise.wav; sourceTree = "<group>"; };
 		95F8E84A23229DD900F6D76E /* wombNoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wombNoise.wav; sourceTree = "<group>"; };
 		95F8E84B23229DDA00F6D76E /* natureNoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = natureNoise.wav; sourceTree = "<group>"; };
-		95F8E84C23229DDB00F6D76E /* babyNoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = babyNoise.wav; sourceTree = "<group>"; };
+		95F8E84C23229DDB00F6D76E /* babyMobileNoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = babyMobileNoise.wav; sourceTree = "<group>"; };
 		95F8E84D23229DDB00F6D76E /* trainNoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = trainNoise.wav; sourceTree = "<group>"; };
 		95F8E84E23229DDB00F6D76E /* whiteNoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = whiteNoise.wav; sourceTree = "<group>"; };
 		95F8E84F23229DDC00F6D76E /* hairdryerNoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hairdryerNoise.wav; sourceTree = "<group>"; };
@@ -98,8 +98,8 @@
 		95F8E84123229CB200F6D76E /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				95F8E84423229DD800F6D76E /* airpaneNoise.wav */,
-				95F8E84C23229DDB00F6D76E /* babyNoise.wav */,
+				95F8E84423229DD800F6D76E /* airplaneNoise.wav */,
+				95F8E84C23229DDB00F6D76E /* babyMobileNoise.wav */,
 				95F8E84223229DD800F6D76E /* carNoise.wav */,
 				95F8E84923229DD900F6D76E /* dryerNoise.wav */,
 				95F8E84523229DD800F6D76E /* fanNoise.wav */,
@@ -182,12 +182,12 @@
 				95F8E85E23229DDC00F6D76E /* hairdryerNoise.wav in Resources */,
 				95F8E85523229DDC00F6D76E /* fireNoise.wav in Resources */,
 				95F8E85F23229DDC00F6D76E /* stormNoise.wav in Resources */,
-				95F8E85323229DDC00F6D76E /* airpaneNoise.wav in Resources */,
+				95F8E85323229DDC00F6D76E /* airplaneNoise.wav in Resources */,
 				95F8E85C23229DDC00F6D76E /* trainNoise.wav in Resources */,
 				95D9B6A922FF7FB1004E4BA4 /* Assets.xcassets in Resources */,
 				95F8E85423229DDC00F6D76E /* fanNoise.wav in Resources */,
 				95F8E85D23229DDC00F6D76E /* whiteNoise.wav in Resources */,
-				95F8E85B23229DDC00F6D76E /* babyNoise.wav in Resources */,
+				95F8E85B23229DDC00F6D76E /* babyMobileNoise.wav in Resources */,
 				95F8E85A23229DDC00F6D76E /* natureNoise.wav in Resources */,
 				95F8E85223229DDC00F6D76E /* oceanNoise.wav in Resources */,
 				95D9B6A722FF7FB0004E4BA4 /* Main.storyboard in Resources */,
