@@ -100,7 +100,10 @@ class ViewController: UIViewController {
             audioPlayer = try AVAudioPlayer(contentsOf: soundUrl!)
             
             // Actually play the sound
-            audioPlayer?.play()
+            guard let player = audioPlayer else { return }
+            player.numberOfLoops = -1 // infinity loop
+            player.prepareToPlay()
+            player.play()
             
         } catch {
             
@@ -110,7 +113,7 @@ class ViewController: UIViewController {
         }
         
     }
-    // TODO: - uncomment when sounds have been added
+    
     func pickSound(_ button: UIButton) {
         
         // Get the selected button based on its tag property, and use that tag - 1 to selcet the sound to play using the method.
@@ -181,6 +184,9 @@ class ViewController: UIViewController {
         
         // Check if the switch is on or not - plays multiple sounds
         if multipleSoundsSwitch.isOn == true  {
+            //TODO: play multiple sounds
+            // Play the sound
+            pickSound(sender)
             
             // Set the button border
             buttonBorderSetup(button: sender)
@@ -201,19 +207,14 @@ class ViewController: UIViewController {
                 
             }
             
-            let selectedSound = soundArray[sender.tag - 1]
-            print(selectedSound)
-            
-            playSound(selectedSound)
-
+            // Play the sound
+            pickSound(sender)
             
             // Set the button border
             buttonBorderSetup(button: sender)
             
         }
         
-        // Play the sound
-        pickSound(sender)
         
     }
     
