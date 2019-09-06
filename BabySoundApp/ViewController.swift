@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     var timer:Timer?
     var count = 0
     var audioPlayer: AVAudioPlayer?
-    var soundArray = ["baby", "womb", "whitenoise", "dryer", "fan", "hairdryer", "car", "airplane", "train", "ocean", " nature", "fire", "fire", "storm", "rain", "shower"]
+    var soundArray = ["babyMobileNoise", "wombNoise", "whiteNoise", "dryerNoise", "fanNoise", "hairdryerNoise", "carNoise", "airplaneNoise", "trainNoise", "oceanNoise", "natureNoise", "fireNoise", "stormNoise", "rainNoise", "showerNoise"]
     
     // IBOutlets
     @IBOutlet weak var timerLabel: UILabel!
@@ -89,7 +89,7 @@ class ViewController: UIViewController {
     func playSound(_ note: String) {
         
         // Make a reference to the sound url
-        let soundUrl = Bundle.main.url(forResource: note, withExtension: ".wav")
+        let soundUrl = Bundle.main.url(forResource: note, withExtension: "wav")
         
         // Make sure the sound url is not nil
         guard soundUrl != nil else { return }
@@ -113,11 +113,11 @@ class ViewController: UIViewController {
     // TODO: - uncomment when sounds have been added
     func pickSound(_ button: UIButton) {
         
-        // Get the selected button based on  its tag property, and use that tag - 1 to selcet the sound to play using the method.
-//        let selectedSound = soundArray[button.tag - 1]
-//
-//        // Play the sound
-//        playSound(selectedSound)
+        // Get the selected button based on its tag property, and use that tag - 1 to selcet the sound to play using the method.
+        let selectedSound = soundArray[button.tag - 1]
+
+        // Play the sound
+        playSound(selectedSound)
         
     }
     
@@ -200,6 +200,12 @@ class ViewController: UIViewController {
                 }
                 
             }
+            
+            let selectedSound = soundArray[sender.tag - 1]
+            print(selectedSound)
+            
+            playSound(selectedSound)
+
             
             // Set the button border
             buttonBorderSetup(button: sender)
