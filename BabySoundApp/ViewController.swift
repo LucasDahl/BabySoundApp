@@ -100,12 +100,14 @@ class ViewController: UIViewController {
         
         do {
             
+            
             // try playing the sound file
             audioPlayer = try AVAudioPlayer(contentsOf: soundUrl!)
             
             // Allows for sound to be played while phone is locked and when at the home screen
             try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
             try AVAudioSession.sharedInstance().setActive(true)
+            
             
             // Actually play the sound
             guard let player = audioPlayer else { return }
@@ -119,6 +121,7 @@ class ViewController: UIViewController {
             print("Error playing sound file: \(error)")
             
         }
+        
         
     }
     
@@ -180,14 +183,13 @@ class ViewController: UIViewController {
     @IBAction func soundButton(_ sender: UIButton) {
         
         // TODO: refactor, plus make the sounds stop playing if they are deslected
-        
-        
         // Check if the switch is on or not - plays multiple sounds
         if multipleSoundsSwitch.isOn == true  {
             //TODO: play multiple sounds
+            
             // Play the sound
             pickSound(sender)
-            
+
             // Set the button border
             buttonBorderSetup(button: sender)
             
@@ -226,7 +228,6 @@ class ViewController: UIViewController {
             if button.layer.borderWidth == 3 {
                 
                 button.layer.borderWidth = 0
-                // TODO: end the current sound? May need to be moved
                 
             }
             
