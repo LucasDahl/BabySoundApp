@@ -41,12 +41,13 @@ class ViewController: UIViewController {
             let seconds = String(format: ":%02i", (count % 60))
             timerLabel.text = minutes + seconds
             count -= 1
-            // TODO: turn off the sound
             
             if count <= 0 {
                 
-                //timer.
                 timerLabel.text = "0:00"
+                
+                // Stop the sound
+                audioPlayer?.stop()
                 
             }
             
@@ -101,6 +102,10 @@ class ViewController: UIViewController {
             
             // try playing the sound file
             audioPlayer = try AVAudioPlayer(contentsOf: soundUrl!)
+            
+            // Allows for sound to be played while phone is locked and when at the home screen
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+            try AVAudioSession.sharedInstance().setActive(true)
             
             // Actually play the sound
             guard let player = audioPlayer else { return }
