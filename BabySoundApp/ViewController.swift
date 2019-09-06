@@ -150,29 +150,21 @@ class ViewController: UIViewController {
             
             // The count for the timer
             count = 900
-            // Set the label
-            //timerLabel.text = "15:00"
             
         } else if sender.tag == 2 {
             
             // The count for the timer
             count = 1800
-            // Set the label
-            timerLabel.text = "30:00"
             
         } else if sender.tag == 3 {
             
             // The count for the timer
             count = 2700
-            // Set the label
-            timerLabel.text = "45:00"
             
         } else if sender.tag == 4 {
             
             // The count for the timer
             count = 3600
-            // Set the label
-            timerLabel.text = "60:00"
             
         } else if sender.tag == 5 {
             
@@ -240,10 +232,11 @@ class ViewController: UIViewController {
             
         }
         
-        // Cencel the sound
+        // Cancel the sound
         audioPlayer?.stop()
         
-        // TODO: - Cancel the the timer
+        // Cancel the timer
+        timer?.invalidate()
         
         
     }
