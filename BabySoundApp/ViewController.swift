@@ -121,6 +121,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                 return
             }
             
+            // Allows for sound to be played while phone is locked and when at the home screen
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
             
         } catch {
             
@@ -157,10 +161,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             
             button.layer.borderWidth = 0
             
-            // Stop anysound that is being played
             // stop only the deslected sound here
-            multipleSounds
-            
+            //multipleSounds
+            stopSounds() // remove
         }
         
     }

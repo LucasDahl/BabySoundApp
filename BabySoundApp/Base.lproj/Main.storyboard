@@ -51,6 +51,7 @@
                                                                 <subviews>
                                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moh-WY-GdR">
                                                                         <rect key="frame" x="0.0" y="0.0" width="104.5" height="108"/>
+                                                                        <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <state key="normal" image="babymobile"/>
                                                                         <connections>
                                                                             <action selector="soundButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gKh-73-57R"/>
