@@ -10,11 +10,13 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController, AVAudioPlayerDelegate {
+    
+    //TODO: replace car sound
 
     // Properties
     var timer:Timer?
     var count = 0
-    var duplicatePlayers: [AVAudioPlayer] = []
+    var multipleSounds: [AVAudioPlayer] = []
     var soundArray = ["babyMobileNoise", "wombNoise", "whiteNoise", "dryerNoise", "fanNoise", "hairdryerNoise", "carNoise", "airplaneNoise", "trainNoise", "oceanNoise", "natureNoise", "fireNoise", "stormNoise", "rainNoise", "showerNoise"]
     
     
@@ -28,9 +30,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
     }
     
-    //================
-    // MARK: - Methods
-    //================
+    //=======================
+    // MARK: -  Timer Methods
+    //=======================
     
     @objc func timerElapsed() {
         // TODO: - fixed timer, it has a delay
@@ -50,18 +52,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                 // Stop the sound
                 stopSounds()
                 
+                
             }
             
         }
     
-    }
-    
-    func stopSounds() {
-        
-        for sound in duplicatePlayers {
-            sound.stop()
-        }
-        
     }
     
     func setupTimer() {
@@ -78,25 +73,19 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
     }
     
-    func buttonBorderSetup(button: UIButton) {
+    
+    //====================
+    // MARK: sound Methods
+    //====================
+    
+    func stopSounds() {
         
-        // Set the border around the selected button
-        if button.layer.borderWidth == 0 {
-            
-            button.layer.borderColor = UIColor.black.cgColor
-            button.layer.cornerRadius = 5
-            button.layer.borderWidth = 3
-            
-        } else if button.layer.borderWidth == 3 {
-            
-            button.layer.borderWidth = 0
-            
-            // Stop anysound that is being played - as a backup most likely will not be called
-            stopSounds()
-            
+        for sound in multipleSounds {
+            sound.stop()
         }
         
     }
+    
     
     func playSound(_ note: String) {
         
@@ -111,6 +100,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             
             stopSounds()
             
+            
         }
         
         
@@ -123,9 +113,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             soundPlayer.play()
             
             // Check to see if the sound is already playing
-            if !duplicatePlayers.contains(soundPlayer) {
+            if !multipleSounds.contains(soundPlayer) {
                 
-                duplicatePlayers.append(soundPlayer)
+                multipleSounds.append(soundPlayer)
                 
             } else {
                 return
@@ -150,9 +140,30 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
     }
     
-    //==============
-    // End - Methods
-    //==============
+    //=================
+    // MARK: UI Methods
+    //=================
+    
+    func buttonBorderSetup(button: UIButton) {
+        
+        // Set the border around the selected button
+        if button.layer.borderWidth == 0 {
+            
+            button.layer.borderColor = UIColor.black.cgColor
+            button.layer.cornerRadius = 5
+            button.layer.borderWidth = 3
+            
+        } else if button.layer.borderWidth == 3 {
+            
+            button.layer.borderWidth = 0
+            
+            // Stop anysound that is being played
+            // stop only the deslected sound here
+            multipleSounds
+            
+        }
+        
+    }
     
     
     //==================
@@ -250,7 +261,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         // Remove all sounds for the array to cancel them
         stopSounds()
-        
+
         // Cancel the timer
         timer?.invalidate()
         
