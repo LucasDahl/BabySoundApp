@@ -116,7 +116,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         do {
             
-            // Creat the sound player
+            // Create the sound player
             let soundPlayer = try AVAudioPlayer( contentsOf: soundUrl! )
             soundPlayer.numberOfLoops = -1
             soundPlayer.volume = 1
