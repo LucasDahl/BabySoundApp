@@ -9,13 +9,14 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AVAudioPlayerDelegate {
 
     // Properties
     var timer:Timer?
     var count = 0
     var audioPlayer: AVAudioPlayer?
     var soundArray = ["babyMobileNoise", "wombNoise", "whiteNoise", "dryerNoise", "fanNoise", "hairdryerNoise", "carNoise", "airplaneNoise", "trainNoise", "oceanNoise", "natureNoise", "fireNoise", "stormNoise", "rainNoise", "showerNoise"]
+    var duplicatePlayers: [AVAudioPlayer] = []
     
     // IBOutlets
     @IBOutlet weak var timerLabel: UILabel!
@@ -94,33 +95,36 @@ class ViewController: UIViewController {
         
         // Make a reference to the sound url
         let soundUrl = Bundle.main.url(forResource: note, withExtension: "wav")
-        
         // Make sure the sound url is not nil
         guard soundUrl != nil else { return }
         
-        do {
+        // Check to see if the user only wants to play one sound
+        if multipleSoundsSwitch.isOn == false {
             
-            
-            // try playing the sound file
-            audioPlayer = try AVAudioPlayer(contentsOf: soundUrl!)
-            
-            // Allows for sound to be played while phone is locked and when at the home screen
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
-            try AVAudioSession.sharedInstance().setActive(true)
-            
-            
-            // Actually play the sound
-            guard let player = audioPlayer else { return }
-            player.numberOfLoops = -1 // infinity loop
-            player.prepareToPlay()
-            player.play()
-            
-        } catch {
-            
-            // There was an error
-            print("Error playing sound file: \(error)")
+            for sound in duplicatePlayers {
+                sound.stop()
+            }
             
         }
+        
+        
+        do {
+            let soundPlayer = try AVAudioPlayer( contentsOf: soundUrl! )
+            soundPlayer.numberOfLoops = -1
+            soundPlayer.volume = 1
+            soundPlayer.play()
+            
+            if !duplicatePlayers.contains(soundPlayer) {
+                duplicatePlayers.append(soundPlayer)
+            } else {
+                return
+            }
+            
+            
+        } catch {
+            print("Error playing sound file: \(error)")
+        }
+        
         
         
     }
@@ -233,8 +237,14 @@ class ViewController: UIViewController {
             
         }
         
+        // Remove all sounds for the array
+        for sound in duplicatePlayers {
+            sound.stop()
+        }
+        
         // Cancel the sound
         audioPlayer?.stop()
+        
         
         // Cancel the timer
         timer?.invalidate()
