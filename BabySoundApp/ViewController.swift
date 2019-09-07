@@ -48,12 +48,20 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                 timerLabel.text = "0:00"
                 
                 // Stop the sound
-                audioPlayer?.stop()
+                stopSounds()
                 
             }
             
         }
     
+    }
+    
+    func stopSounds() {
+        
+        for sound in duplicatePlayers {
+            sound.stop()
+        }
+        
     }
     
     func setupTimer() {
@@ -64,7 +72,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         }
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
-        
         
         // This allows the timer to work while scrolling
         RunLoop.main.add(timer!, forMode: RunLoop.Mode.common)
@@ -84,8 +91,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             
             button.layer.borderWidth = 0
             
-            // Stop anysound that is being played
-            audioPlayer?.stop()
+            // Stop anysound that is being played - as a backup most likely will not be called
+            stopSounds()
             
         }
         
@@ -102,9 +109,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         // Check to see if the user only wants to play one sound
         if multipleSoundsSwitch.isOn == false {
             
-            for sound in duplicatePlayers {
-                sound.stop()
-            }
+            stopSounds()
             
         }
         
@@ -132,9 +137,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             print("Error playing sound file: \(error)")
             
         }
-        
-        
-        
+
     }
     
     func pickSound(_ button: UIButton) {
@@ -215,7 +218,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                     button.layer.borderWidth = 0
                     
                     // Stop the sounds from being played
-                    audioPlayer?.stop()
+                    stopSounds()
                     
                 }
                 
@@ -245,14 +248,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             
         }
         
-        // Remove all sounds for the array
-        for sound in duplicatePlayers {
-            sound.stop()
-        }
-        
-        // Cancel the sound
-        audioPlayer?.stop()
-        
+        // Remove all sounds for the array to cancel them
+        stopSounds()
         
         // Cancel the timer
         timer?.invalidate()
