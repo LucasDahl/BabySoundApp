@@ -14,9 +14,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     // Properties
     var timer:Timer?
     var count = 0
-    var audioPlayer: AVAudioPlayer?
-    var soundArray = ["babyMobileNoise", "wombNoise", "whiteNoise", "dryerNoise", "fanNoise", "hairdryerNoise", "carNoise", "airplaneNoise", "trainNoise", "oceanNoise", "natureNoise", "fireNoise", "stormNoise", "rainNoise", "showerNoise"]
     var duplicatePlayers: [AVAudioPlayer] = []
+    var soundArray = ["babyMobileNoise", "wombNoise", "whiteNoise", "dryerNoise", "fanNoise", "hairdryerNoise", "carNoise", "airplaneNoise", "trainNoise", "oceanNoise", "natureNoise", "fireNoise", "stormNoise", "rainNoise", "showerNoise"]
+    
     
     // IBOutlets
     @IBOutlet weak var timerLabel: UILabel!
@@ -95,6 +95,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         // Make a reference to the sound url
         let soundUrl = Bundle.main.url(forResource: note, withExtension: "wav")
+        
         // Make sure the sound url is not nil
         guard soundUrl != nil else { return }
         
@@ -109,20 +110,27 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         
         do {
+            
+            // Creat the sound player
             let soundPlayer = try AVAudioPlayer( contentsOf: soundUrl! )
             soundPlayer.numberOfLoops = -1
             soundPlayer.volume = 1
             soundPlayer.play()
             
+            // Check to see if the sound is already playing
             if !duplicatePlayers.contains(soundPlayer) {
+                
                 duplicatePlayers.append(soundPlayer)
+                
             } else {
                 return
             }
             
             
         } catch {
+            
             print("Error playing sound file: \(error)")
+            
         }
         
         
