@@ -31,17 +31,17 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         // Setup the sounds when loading
         soundPlayerSetup()
-        setupTimer()
         
     }
     
     
     //=======================
-    // MARK: -  Timer Methods
+    // MARK: - Timer Methods
     //=======================
     
+    // Objc timer method
     @objc func timerElapsed() {
-        // TODO: - fixed timer, it has a delay
+        
         // Check to see if the count property is at zero
         if count > 0 {
             
@@ -49,6 +49,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             let minutes = String(count / 60)
             let seconds = String(format: ":%02i", (count % 60))
             timerLabel.text = minutes + seconds
+            
+            // Reduce the count by 1
             count -= 1
             
             if count <= 0 {
@@ -73,6 +75,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     }
     
+    // Setup up the timer when called
     func setupTimer() {
         
         // Invalidate any timers that are currently running.
@@ -80,6 +83,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             timer?.invalidate()
         }
         
+        // Set the timer scheduled
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
         
         // This allows the timer to work while scrolling
@@ -87,11 +91,16 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
     }
     
+    //==================
+    // End Timer Methods
+    //==================
+    
     
     //====================
-    // MARK: sound Methods
+    // MARK: Sound Methods
     //====================
     
+    // Stop all sounds
     func stopSounds() {
         
         for sound in multipleSounds {
@@ -100,6 +109,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
     }
     
+    // Setup the sound player array
     func soundPlayerSetup() {
         
         do {
@@ -130,6 +140,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     
+    // Play the sound picked
     func playSound(_ selectedSound: Int) {
         
         if multipleSoundsSwitch.isOn == false {
@@ -155,6 +166,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
 
     }
     
+    // Pick a sound to play
     func pickSound(_ button: UIButton) {
         
         // Get the selected button based on its tag property, and use that tag - 1 to selcet the sound to play using the method.
@@ -165,10 +177,15 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
     }
     
+    //==================
+    // End Sound Methods
+    //==================
+    
     //=================
     // MARK: UI Methods
     //=================
     
+    // Method to alter the button border
     func buttonBorderSetup(button: UIButton) {
         
         // Set the border around the selected button
@@ -193,10 +210,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             
             button.layer.borderWidth = 0
             
-            
         }
         
     }
+    
+    //===============
+    // End UI Methods
+    //===============
     
     
     //==================
@@ -210,28 +230,25 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         if sender.tag == 1 {
             
-            // The count for the timer
-            count = 10 // is 10 seconds for testing, will be 10 minutes
+            count = 900
             
         } else if sender.tag == 2 {
             
-            // The count for the timer
             count = 1800
             
         } else if sender.tag == 3 {
             
-            // The count for the timer
             count = 2700
             
         } else if sender.tag == 4 {
             
-            // The count for the timer
             count = 3600
             
         } else if sender.tag == 5 {
             
             // Stop the timer
             timer?.invalidate()
+            
             // Set the label
             timerLabel.text = "00:00"
             
@@ -242,7 +259,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     @IBAction func soundButton(_ sender: UIButton) {
         
-        // TODO: refactor, plus make the sounds stop playing if they are deslected
         // Check if the switch is on or not - plays multiple sounds
         if multipleSoundsSwitch.isOn == true  {
             
@@ -277,7 +293,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             
         }
         
-        
     }
     
     @IBAction func stopSoundButton(_ sender: UIButton) {
@@ -299,14 +314,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         // Cancel the timer
         timer?.invalidate()
         
-        
     }
     
-    //================
-    // End - IBActions
-    //================
-    
-    
+    //==================
+    // End IBActions
+    //==================
     
 } // End class
 
