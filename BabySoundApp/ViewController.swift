@@ -46,7 +46,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         if count > 0 {
             
             // Create the properties for minutes and seconds
-            let minutes = Int(count) / 60 //% 60
+            let minutes = Int(count) / 60
             let seconds = Int(count) % 60
             timerLabel.text = String(format: "%02i:%02i" , minutes, seconds)
             
@@ -56,7 +56,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             // If the count( or time) is equal to zero 
             if count <= 0 {
                 
-                timerLabel.text = "0:00"
+                timerLabel.text = "00:00"
                 
                 // Stop the sound
                 stopSounds()
