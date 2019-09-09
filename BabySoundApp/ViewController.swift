@@ -46,13 +46,14 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         if count > 0 {
             
             // Create the properties for minutes and seconds
-            let minutes = String(count / 60)
-            let seconds = String(format: ":%02i", (count % 60))
-            timerLabel.text = minutes + seconds
+            let minutes = Int(count) / 60 //% 60
+            let seconds = Int(count) % 60
+            timerLabel.text = String(format: "%02i:%02i" , minutes, seconds)
             
             // Reduce the count by 1
             count -= 1
             
+            // If the count( or time) is equal to zero 
             if count <= 0 {
                 
                 timerLabel.text = "0:00"
@@ -138,7 +139,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         
     }
-    
     
     // Play the sound picked
     func playSound(_ selectedSound: Int) {
@@ -230,7 +230,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         if sender.tag == 1 {
             
-            count = 900
+            count = 600
             
         } else if sender.tag == 2 {
             
