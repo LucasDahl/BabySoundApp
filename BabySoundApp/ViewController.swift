@@ -18,7 +18,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     var count = 0
     var multipleSounds: [AVAudioPlayer] = []
     var soundArray = ["babyMobileNoise", "wombNoise", "whiteNoise", "dryerNoise", "fanNoise", "hairdryerNoise", "carNoise", "airplaneNoise", "trainNoise", "oceanNoise", "natureNoise", "fireNoise", "stormNoise", "rainNoise", "showerNoise"]
-    
+    var soundStopped: AVAudioPlayer?
     
     // IBOutlets
     @IBOutlet weak var timerLabel: UILabel!
@@ -27,6 +27,35 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        soundPlayerSetup()
+    }
+    
+    func soundPlayerSetup() {
+        
+        do {
+            
+            for sound in soundArray {
+                
+                // Make a reference to the sound url
+                let soundUrl = Bundle.main.url(forResource: sound, withExtension: "wav")
+                
+                // Make sure the sound url is not nil
+                guard soundUrl != nil else { return }
+                
+                // Create the sound player
+                let soundPlayer = try AVAudioPlayer(contentsOf: soundUrl!)
+                soundPlayer.numberOfLoops = -1
+                soundPlayer.volume = 1
+                multipleSounds.append(soundPlayer)
+                
+            }
+            
+        } catch {
+            
+            print("Error creating sound players: \(error)")
+            
+        }
+        
         
     }
     
@@ -87,49 +116,27 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     
-    func playSound(_ note: String) {
+    func playSound(_ selectedSound: Int) {
         
-        // Make a reference to the sound url
-        let soundUrl = Bundle.main.url(forResource: note, withExtension: "wav")
-        
-        // Make sure the sound url is not nil
-        guard soundUrl != nil else { return }
-        
-        // Check to see if the user only wants to play one sound
         if multipleSoundsSwitch.isOn == false {
-            
+
             stopSounds()
-            
-            
+
         }
         
-        
+        multipleSounds[selectedSound].play()
+
         do {
-            
-            // Create the sound player
-            let soundPlayer = try AVAudioPlayer( contentsOf: soundUrl! )
-            soundPlayer.numberOfLoops = -1
-            soundPlayer.volume = 1
-            soundPlayer.play()
-            
-            // Check to see if the sound is already playing
-            if !multipleSounds.contains(soundPlayer) {
-                
-                multipleSounds.append(soundPlayer)
-                
-            } else {
-                return
-            }
             
             // Allows for sound to be played while phone is locked and when at the home screen
             try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
             try AVAudioSession.sharedInstance().setActive(true)
-            
-            
+
+
         } catch {
-            
+
             print("Error playing sound file: \(error)")
-            
+
         }
 
     }
@@ -137,7 +144,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     func pickSound(_ button: UIButton) {
         
         // Get the selected button based on its tag property, and use that tag - 1 to selcet the sound to play using the method.
-        let selectedSound = soundArray[button.tag - 1]
+        let selectedSound = button.tag - 1
 
         // Play the sound
         playSound(selectedSound)
@@ -159,11 +166,21 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             
         } else if button.layer.borderWidth == 3 {
             
+            // stop only the deslected sound here
+            if multipleSoundsSwitch.isOn == true {
+
+                multipleSounds[button.tag - 1].stop()
+
+
+            } else {
+
+                stopSounds()
+
+            }
+            
             button.layer.borderWidth = 0
             
-            // stop only the deslected sound here
-            //multipleSounds
-            stopSounds() // remove
+            
         }
         
     }
@@ -214,13 +231,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         // TODO: refactor, plus make the sounds stop playing if they are deslected
         // Check if the switch is on or not - plays multiple sounds
         if multipleSoundsSwitch.isOn == true  {
-            //TODO: play multiple sounds
             
             // Play the sound
             pickSound(sender)
 
             // Set the button border
             buttonBorderSetup(button: sender)
+            
             
         } else { // plays one sound
             
