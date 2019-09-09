@@ -171,7 +171,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
 
                 multipleSounds[button.tag - 1].stop()
 
-
             } else {
 
                 stopSounds()
