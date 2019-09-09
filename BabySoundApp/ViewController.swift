@@ -16,9 +16,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     // Properties
     var timer:Timer?
     var count = 0
+    var soundStopped: AVAudioPlayer?
     var multipleSounds: [AVAudioPlayer] = []
     var soundArray = ["babyMobileNoise", "wombNoise", "whiteNoise", "dryerNoise", "fanNoise", "hairdryerNoise", "carNoise", "airplaneNoise", "trainNoise", "oceanNoise", "natureNoise", "fireNoise", "stormNoise", "rainNoise", "showerNoise"]
-    var soundStopped: AVAudioPlayer?
+    
     
     // IBOutlets
     @IBOutlet weak var timerLabel: UILabel!
@@ -27,37 +28,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Setup the sounds when loading
         soundPlayerSetup()
+        setupTimer()
+        
     }
     
-    func soundPlayerSetup() {
-        
-        do {
-            
-            for sound in soundArray {
-                
-                // Make a reference to the sound url
-                let soundUrl = Bundle.main.url(forResource: sound, withExtension: "wav")
-                
-                // Make sure the sound url is not nil
-                guard soundUrl != nil else { return }
-                
-                // Create the sound player
-                let soundPlayer = try AVAudioPlayer(contentsOf: soundUrl!)
-                soundPlayer.numberOfLoops = -1
-                soundPlayer.volume = 1
-                multipleSounds.append(soundPlayer)
-                
-            }
-            
-        } catch {
-            
-            print("Error creating sound players: \(error)")
-            
-        }
-        
-        
-    }
     
     //=======================
     // MARK: -  Timer Methods
@@ -81,6 +58,14 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                 // Stop the sound
                 stopSounds()
                 
+                // Make sure the border turns off for selected buttons when the timer runs out
+                for button in buttonArray {
+                    
+                    if button.layer.borderWidth == 3 && multipleSounds[button.tag - 1].isPlaying == false {
+                        button.layer.borderWidth = 0
+                    }
+                    
+                }
                 
             }
             
@@ -112,6 +97,35 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         for sound in multipleSounds {
             sound.stop()
         }
+        
+    }
+    
+    func soundPlayerSetup() {
+        
+        do {
+            
+            for sound in soundArray {
+                
+                // Make a reference to the sound url
+                let soundUrl = Bundle.main.url(forResource: sound, withExtension: "wav")
+                
+                // Make sure the sound url is not nil
+                guard soundUrl != nil else { return }
+                
+                // Create the sound player
+                let soundPlayer = try AVAudioPlayer(contentsOf: soundUrl!)
+                soundPlayer.numberOfLoops = -1
+                soundPlayer.volume = 1
+                multipleSounds.append(soundPlayer)
+                
+            }
+            
+        } catch {
+            
+            print("Error creating sound players: \(error)")
+            
+        }
+        
         
     }
     
@@ -197,7 +211,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         if sender.tag == 1 {
             
             // The count for the timer
-            count = 900
+            count = 10 // is 10 seconds for testing, will be 10 minutes
             
         } else if sender.tag == 2 {
             
@@ -222,6 +236,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             timerLabel.text = "00:00"
             
         }
+        
         
     }
     
