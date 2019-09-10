@@ -32,6 +32,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         // Setup the sounds when loading
         soundPlayerSetup()
         
+        // Setup the timer
+        setupTimer()
+        
     }
     
     
@@ -46,8 +49,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         if count > 0 {
             
             // Create the properties for minutes and seconds
-            let minutes = Int(count) / 60
-            let seconds = Int(count) % 60
+            let minutes = (count) / 60
+            let seconds = (count) % 60
             timerLabel.text = String(format: "%02i:%02i" , minutes, seconds)
             
             // Reduce the count by 1
@@ -80,9 +83,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     func setupTimer() {
         
         // Invalidate any timers that are currently running.
-        if timer != nil {
-            timer?.invalidate()
-        }
+//        if timer != nil {
+//            timer?.invalidate()
+//        }
         
         // Set the timer scheduled
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
@@ -225,8 +228,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
 
     @IBAction func timeButtonTapped(_ sender: UIButton) {
         
-        // Setup the timer
-        setupTimer()
         
         if sender.tag == 1 {
             
@@ -309,6 +310,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         }
         
         // Remove all sounds for the array to cancel them
+        //TODO: reset the timer back to the time it was before sound was stop, and have it resume
         stopSounds()
 
         // Cancel the timer

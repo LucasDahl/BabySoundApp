@@ -18,8 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="EAo-DS-rO2">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L1e-H7-HAp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="D3T-pi-iMg"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EAo-DS-rO2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="817"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEd-6m-R3b">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
@@ -38,10 +45,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dD-YI-Aob">
-                                        <rect key="frame" x="0.0" y="74" width="414" height="522"/>
+                                        <rect key="frame" x="0.0" y="45" width="414" height="637"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="VeS-mQ-kkz">
-                                                <rect key="frame" x="10" y="8" width="394" height="514"/>
+                                                <rect key="frame" x="10" y="8" width="394" height="629"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Udf-YE-QsM">
                                                         <rect key="frame" x="0.0" y="15" width="394" height="601"/>
@@ -315,7 +322,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fDO-Ke-fxX">
-                                        <rect key="frame" x="0.0" y="625" width="414" height="45"/>
+                                        <rect key="frame" x="0.0" y="682" width="414" height="45"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="cNd-S3-bgX">
                                                 <rect key="frame" x="20" y="5" width="374" height="35"/>
@@ -323,6 +330,7 @@
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpg-1w-2h5">
                                                         <rect key="frame" x="0.0" y="2.5" width="49.5" height="30"/>
                                                         <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <state key="normal" title="15'">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -338,6 +346,7 @@
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GH-Lt-6Z2">
                                                         <rect key="frame" x="65.5" y="2.5" width="49.5" height="30"/>
                                                         <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <state key="normal" title="30'">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -353,6 +362,7 @@
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9K-nw-6zL">
                                                         <rect key="frame" x="131" y="2.5" width="49" height="30"/>
                                                         <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <state key="normal" title="45'">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -368,6 +378,7 @@
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcL-ST-ad0">
                                                         <rect key="frame" x="196" y="2.5" width="49.5" height="30"/>
                                                         <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <state key="normal" title="60'">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -380,10 +391,10 @@
                                                             <action selector="timeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yta-TN-A4M"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Th-Dg-Kbx">
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Th-Dg-Kbx">
                                                         <rect key="frame" x="261.5" y="2.5" width="49.5" height="30"/>
                                                         <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="♾'">
+                                                        <state key="normal" image="infinity">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
@@ -406,6 +417,7 @@
                                                 <constraints>
                                                     <constraint firstItem="5Th-Dg-Kbx" firstAttribute="width" secondItem="KcL-ST-ad0" secondAttribute="width" id="EEa-zn-YRl"/>
                                                     <constraint firstItem="C9K-nw-6zL" firstAttribute="width" secondItem="3GH-Lt-6Z2" secondAttribute="width" id="X24-DK-fZN"/>
+                                                    <constraint firstItem="5Th-Dg-Kbx" firstAttribute="height" secondItem="KcL-ST-ad0" secondAttribute="height" id="fG6-xU-pAB"/>
                                                     <constraint firstItem="KcL-ST-ad0" firstAttribute="width" secondItem="C9K-nw-6zL" secondAttribute="width" id="kRR-GN-Yrg"/>
                                                     <constraint firstItem="zpg-1w-2h5" firstAttribute="width" secondItem="3GH-Lt-6Z2" secondAttribute="width" id="qxE-DY-ySL"/>
                                                 </constraints>
@@ -419,7 +431,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I7c-zU-sFw">
-                                        <rect key="frame" x="0.0" y="699" width="414" height="45"/>
+                                        <rect key="frame" x="0.0" y="727" width="414" height="45"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="4pw-2N-hX7">
                                                 <rect key="frame" x="5" y="5" width="404" height="35"/>
@@ -459,7 +471,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ov-6q-hod">
-                                        <rect key="frame" x="0.0" y="773" width="414" height="45"/>
+                                        <rect key="frame" x="0.0" y="772" width="414" height="45"/>
                                         <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="Ct9-Zq-pOK"/>
@@ -472,13 +484,30 @@
                                     <constraint firstItem="I7c-zU-sFw" firstAttribute="height" secondItem="7Ov-6q-hod" secondAttribute="height" id="VCL-Ba-WqM"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKc-Bm-yrW">
+                                <rect key="frame" x="0.0" y="861" width="414" height="35"/>
+                                <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Kwt-3b-YiU"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="L1e-H7-HAp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="L34-ah-HQ8"/>
+                            <constraint firstItem="L1e-H7-HAp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NQS-94-fwW"/>
+                            <constraint firstItem="aKc-Bm-yrW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OB9-af-Gen"/>
+                            <constraint firstAttribute="trailing" secondItem="aKc-Bm-yrW" secondAttribute="trailing" id="TSe-oy-akk"/>
                             <constraint firstItem="EAo-DS-rO2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YTj-Vw-A9p"/>
+                            <constraint firstItem="aKc-Bm-yrW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cMG-1Z-fyH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EAo-DS-rO2" secondAttribute="trailing" id="gdB-1I-2zq"/>
+                            <constraint firstAttribute="trailing" secondItem="L1e-H7-HAp" secondAttribute="trailing" id="j9N-7F-4U5"/>
                             <constraint firstItem="EAo-DS-rO2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jMz-DB-icO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EAo-DS-rO2" secondAttribute="bottom" id="zN4-md-PK5"/>
+                            <constraint firstAttribute="bottom" secondItem="aKc-Bm-yrW" secondAttribute="bottom" id="mPl-Nh-hh3"/>
+                            <constraint firstAttribute="bottom" secondItem="aKc-Bm-yrW" secondAttribute="bottom" id="nd5-4P-Kph"/>
+                            <constraint firstItem="L1e-H7-HAp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="p58-Jg-uqe"/>
+                            <constraint firstAttribute="trailing" secondItem="aKc-Bm-yrW" secondAttribute="trailing" id="psv-fl-drc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EAo-DS-rO2" secondAttribute="bottom" constant="1" id="zN4-md-PK5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -515,6 +544,7 @@
         <image name="dryer" width="64" height="64"/>
         <image name="fan" width="64" height="64"/>
         <image name="hairdryer" width="64" height="64"/>
+        <image name="infinity" width="24" height="24"/>
         <image name="pond" width="64" height="64"/>
         <image name="rain" width="64" height="64"/>
         <image name="shower" width="64" height="64"/>
