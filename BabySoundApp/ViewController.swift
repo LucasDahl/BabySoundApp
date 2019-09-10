@@ -54,7 +54,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
         
         // Set the timer tolerance
-        timer?.tolerance = 0.2
+        timer?.tolerance = 0.1
         
         // This allows the timer to work while scrolling
         RunLoop.main.add(timer!, forMode: RunLoop.Mode.common)
@@ -231,23 +231,42 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
 
     @IBAction func timeButtonTapped(_ sender: UIButton) {
         
+        timer?.invalidate()
+        
         setupTimer()
         
         if sender.tag == 1 {
             
-            count = 10
+            if count >= 1 && count <= 900 {
+                timer?.fire()
+            } else {
+                count = 10 // ten seconds for testing, will be 15 minutes when complete
+            }
             
         } else if sender.tag == 2 {
             
-            count = 1800
+            if count >= 901 && count <= 1800 {
+                timer?.fire()
+            } else {
+                count = 1800
+            }
             
         } else if sender.tag == 3 {
             
-            count = 2700
+            if count >= 1801 && count <= 2700 {
+                timer?.fire()
+            } else {
+                count = 2700
+            }
             
         } else if sender.tag == 4 {
             
-            count = 3600
+            if count >= 2701 && count <= 3600 {
+                timer?.fire()
+            } else {
+                count = 3600
+            }
+            
             
         } else if sender.tag == 5 {
             
