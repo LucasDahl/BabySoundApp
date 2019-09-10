@@ -82,13 +82,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     // Setup up the timer when called
     func setupTimer() {
         
-        // Invalidate any timers that are currently running.
-//        if timer != nil {
-//            timer?.invalidate()
-//        }
-        
         // Set the timer scheduled
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
+        
+        // Set the timer tolerance
+        timer?.tolerance = 0.1
         
         // This allows the timer to work while scrolling
         RunLoop.main.add(timer!, forMode: RunLoop.Mode.common)
@@ -231,7 +229,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         if sender.tag == 1 {
             
-            count = 600
+            count = 900
             
         } else if sender.tag == 2 {
             
@@ -310,7 +308,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         }
         
         // Remove all sounds for the array to cancel them
-        //TODO: reset the timer back to the time it was before sound was stop, and have it resume
         stopSounds()
 
         // Cancel the timer
