@@ -33,7 +33,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         // Setup the sounds when loading
         soundPlayerSetup()
         
-        // Setup the timer initally
+        // Setup the timer
         setupTimer()
         
     }
@@ -54,7 +54,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
         
         // Set the timer tolerance
-        timer?.tolerance = 0.1
+        timer?.tolerance = 1.9
         
         // This allows the timer to work while scrolling
         RunLoop.main.add(timer!, forMode: RunLoop.Mode.common)
@@ -132,7 +132,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                 // Create the sound player
                 let soundPlayer = try AVAudioPlayer(contentsOf: soundUrl!)
                 soundPlayer.numberOfLoops = -1
-                soundPlayer.volume = 1
+                soundPlayer.volume = 3
                 multipleSounds.append(soundPlayer)
                 
             }
@@ -231,22 +231,23 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
 
     @IBAction func timeButtonTapped(_ sender: UIButton) {
         
-        timer?.invalidate()
-        
-        setupTimer()
+        // Setup the timer if any was invalidated
+        if timer == nil {
+            setupTimer()
+        }
         
         if sender.tag == 1 {
             
             if count >= 1 && count <= 900 {
-                timer?.fire()
+                return
             } else {
-                count = 10 // ten seconds for testing, will be 15 minutes when complete
+                count = 900
             }
             
         } else if sender.tag == 2 {
             
             if count >= 901 && count <= 1800 {
-                timer?.fire()
+                return
             } else {
                 count = 1800
             }
@@ -254,7 +255,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         } else if sender.tag == 3 {
             
             if count >= 1801 && count <= 2700 {
-                timer?.fire()
+                return
             } else {
                 count = 2700
             }
@@ -262,7 +263,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         } else if sender.tag == 4 {
             
             if count >= 2701 && count <= 3600 {
-                timer?.fire()
+                return
             } else {
                 count = 3600
             }
@@ -272,12 +273,12 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             
             // Stop the timer
             timer?.invalidate()
+            timer = nil
             
             // Set the label
             timerLabel.text = "00:00"
             
         }
-        
         
     }
     
@@ -335,8 +336,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         // Remove all sounds for the array to cancel them
         stopSounds()
 
-        // Cancel the timer
+        // Cancel the timer and make it nil
         timer?.invalidate()
+        timer = nil
         
     }
     
