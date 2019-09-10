@@ -11,7 +11,8 @@ import AVFoundation
 
 class ViewController: UIViewController, AVAudioPlayerDelegate {
     
-    //TODO: replace car sound
+    // TODO: replace car sound
+    // TODO: fix thunder storm sound
 
     // Properties
     var timer:Timer?
@@ -32,7 +33,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         // Setup the sounds when loading
         soundPlayerSetup()
         
-        // Setup the timer
+        // Setup the timer initally
         setupTimer()
         
     }
@@ -41,6 +42,24 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     //=======================
     // MARK: - Timer Methods
     //=======================
+    
+    // Setup up the timer when called
+    func setupTimer() {
+        
+        if timer != nil {
+            timer?.invalidate()
+        }
+        
+        // Set the timer scheduled
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
+        
+        // Set the timer tolerance
+        timer?.tolerance = 0.2
+        
+        // This allows the timer to work while scrolling
+        RunLoop.main.add(timer!, forMode: RunLoop.Mode.common)
+        
+    }
     
     // Objc timer method
     @objc func timerElapsed() {
@@ -77,20 +96,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             
         }
     
-    }
-    
-    // Setup up the timer when called
-    func setupTimer() {
-        
-        // Set the timer scheduled
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
-        
-        // Set the timer tolerance
-        timer?.tolerance = 0.1
-        
-        // This allows the timer to work while scrolling
-        RunLoop.main.add(timer!, forMode: RunLoop.Mode.common)
-        
     }
     
     //==================
@@ -226,10 +231,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
 
     @IBAction func timeButtonTapped(_ sender: UIButton) {
         
+        setupTimer()
         
         if sender.tag == 1 {
             
-            count = 900
+            count = 10
             
         } else if sender.tag == 2 {
             
