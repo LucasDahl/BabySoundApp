@@ -10,9 +10,6 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController, AVAudioPlayerDelegate {
-    
-    // TODO: replace car sound
-    // TODO: fix thunder storm sound
 
     // Properties
     var timer:Timer?

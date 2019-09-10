@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95A70BC0232832B90081DC58 /* stormNoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95A70BBF232832B90081DC58 /* stormNoise.wav */; };
 		95D9B6A222FF7FB0004E4BA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9B6A122FF7FB0004E4BA4 /* AppDelegate.swift */; };
 		95D9B6A422FF7FB0004E4BA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9B6A322FF7FB0004E4BA4 /* ViewController.swift */; };
 		95D9B6A722FF7FB0004E4BA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D9B6A522FF7FB0004E4BA4 /* Main.storyboard */; };
@@ -26,10 +27,10 @@
 		95F8E85C23229DDC00F6D76E /* trainNoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95F8E84D23229DDB00F6D76E /* trainNoise.wav */; };
 		95F8E85D23229DDC00F6D76E /* whiteNoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95F8E84E23229DDB00F6D76E /* whiteNoise.wav */; };
 		95F8E85E23229DDC00F6D76E /* hairdryerNoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95F8E84F23229DDC00F6D76E /* hairdryerNoise.wav */; };
-		95F8E85F23229DDC00F6D76E /* stormNoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95F8E85023229DDC00F6D76E /* stormNoise.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		95A70BBF232832B90081DC58 /* stormNoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stormNoise.wav; sourceTree = "<group>"; };
 		95D9B69E22FF7FB0004E4BA4 /* BabySoundApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabySoundApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D9B6A122FF7FB0004E4BA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95D9B6A322FF7FB0004E4BA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,7 +52,6 @@
 		95F8E84D23229DDB00F6D76E /* trainNoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = trainNoise.wav; sourceTree = "<group>"; };
 		95F8E84E23229DDB00F6D76E /* whiteNoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = whiteNoise.wav; sourceTree = "<group>"; };
 		95F8E84F23229DDC00F6D76E /* hairdryerNoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hairdryerNoise.wav; sourceTree = "<group>"; };
-		95F8E85023229DDC00F6D76E /* stormNoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stormNoise.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +109,7 @@
 				95F8E84323229DD800F6D76E /* oceanNoise.wav */,
 				95F8E84723229DD900F6D76E /* rainNoise.wav */,
 				95F8E84823229DD900F6D76E /* showerNoise.wav */,
-				95F8E85023229DDC00F6D76E /* stormNoise.wav */,
+				95A70BBF232832B90081DC58 /* stormNoise.wav */,
 				95F8E84D23229DDB00F6D76E /* trainNoise.wav */,
 				95F8E84E23229DDB00F6D76E /* whiteNoise.wav */,
 				95F8E84A23229DD900F6D76E /* wombNoise.wav */,
@@ -183,10 +183,10 @@
 				95D9B6AC22FF7FB1004E4BA4 /* LaunchScreen.storyboard in Resources */,
 				95F8E85623229DDC00F6D76E /* rainNoise.wav in Resources */,
 				95F8E85823229DDC00F6D76E /* dryerNoise.wav in Resources */,
+				95A70BC0232832B90081DC58 /* stormNoise.wav in Resources */,
 				95F8E85923229DDC00F6D76E /* wombNoise.wav in Resources */,
 				95F8E85E23229DDC00F6D76E /* hairdryerNoise.wav in Resources */,
 				95F8E85523229DDC00F6D76E /* fireNoise.wav in Resources */,
-				95F8E85F23229DDC00F6D76E /* stormNoise.wav in Resources */,
 				95F8E85323229DDC00F6D76E /* airplaneNoise.wav in Resources */,
 				95F8E85C23229DDC00F6D76E /* trainNoise.wav in Resources */,
 				95D9B6A922FF7FB1004E4BA4 /* Assets.xcassets in Resources */,
