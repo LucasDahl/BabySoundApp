@@ -313,7 +313,7 @@
                                                 </constraints>
                                             </scrollView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="VeS-mQ-kkz" secondAttribute="bottom" id="CNt-oF-HsO"/>
                                             <constraint firstItem="VeS-mQ-kkz" firstAttribute="top" secondItem="8dD-YI-Aob" secondAttribute="topMargin" id="Eg8-6N-vj7"/>
@@ -485,7 +485,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="L1e-H7-HAp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="L34-ah-HQ8"/>
                             <constraint firstItem="L1e-H7-HAp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NQS-94-fwW"/>
