@@ -6,10 +6,12 @@
 //  Copyright © 2019 Lucas Dahl. All rights reserved.
 //
 
+
+
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, AVAudioPlayerDelegate {
+class ViewController: UIViewController {
 
     // Properties
     var timer:Timer?
