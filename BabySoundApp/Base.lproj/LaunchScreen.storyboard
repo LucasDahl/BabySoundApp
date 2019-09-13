@@ -18,16 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoSimple" translatesAutoresizingMaskIntoConstraints="NO" id="p55-oy-bBu">
-                                <rect key="frame" x="50" y="258" width="314" height="314"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSimple" translatesAutoresizingMaskIntoConstraints="NO" id="xte-Tk-wIx">
+                                <rect key="frame" x="82" y="323" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="RxW-Aw-gcu"/>
+                                    <constraint firstAttribute="height" constant="250" id="wSE-oi-nY8"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="p55-oy-bBu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="214" id="3fD-bo-lLt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="p55-oy-bBu" secondAttribute="bottom" constant="290" id="FCp-uV-UhV"/>
-                            <constraint firstItem="p55-oy-bBu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Sna-73-4Kq"/>
-                            <constraint firstItem="p55-oy-bBu" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="yIM-WX-6N9"/>
+                            <constraint firstItem="xte-Tk-wIx" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="31c-7q-2IF"/>
+                            <constraint firstItem="xte-Tk-wIx" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ivQ-RW-mOK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -38,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LogoSimple" width="1024" height="1024"/>
+        <image name="logoSimple" width="1024" height="1024"/>
     </resources>
 </document>

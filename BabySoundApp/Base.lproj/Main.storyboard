@@ -47,7 +47,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dD-YI-Aob">
                                         <rect key="frame" x="0.0" y="45" width="414" height="638"/>
                                         <subviews>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="VeS-mQ-kkz">
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="VeS-mQ-kkz">
                                                 <rect key="frame" x="10" y="8" width="394" height="630"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Udf-YE-QsM">
@@ -306,8 +306,8 @@
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="Udf-YE-QsM" firstAttribute="top" secondItem="VeS-mQ-kkz" secondAttribute="top" constant="15" id="8Nf-Pb-LBp"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Udf-YE-QsM" secondAttribute="bottom" constant="15" id="Ker-yM-DZW"/>
                                                     <constraint firstItem="Udf-YE-QsM" firstAttribute="leading" secondItem="VeS-mQ-kkz" secondAttribute="leading" id="WHn-dx-YEO"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Udf-YE-QsM" secondAttribute="bottom" id="dZW-OF-Trb"/>
                                                     <constraint firstItem="Udf-YE-QsM" firstAttribute="width" secondItem="VeS-mQ-kkz" secondAttribute="width" id="fSk-XN-vhB"/>
                                                     <constraint firstAttribute="trailing" secondItem="Udf-YE-QsM" secondAttribute="trailing" id="ndz-Gj-7in"/>
                                                 </constraints>
@@ -461,6 +461,9 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="APq-iN-OTK" firstAttribute="centerY" secondItem="4pw-2N-hX7" secondAttribute="centerY" id="GYH-4k-8Tj"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <constraints>
@@ -472,16 +475,28 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ov-6q-hod">
                                         <rect key="frame" x="0.0" y="773" width="414" height="45"/>
-                                        <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="PZL-bg-wNz" customClass="GADBannerView">
+                                                <rect key="frame" x="47" y="0.0" width="320" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="320" id="TDx-hi-WNY"/>
+                                                    <constraint firstAttribute="height" constant="50" id="yom-jw-Bpe"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="Ct9-Zq-pOK"/>
+                                            <constraint firstAttribute="height" constant="45" id="1nz-v9-FBW"/>
+                                            <constraint firstItem="PZL-bg-wNz" firstAttribute="centerX" secondItem="7Ov-6q-hod" secondAttribute="centerX" id="Cbf-S3-yyA"/>
+                                            <constraint firstItem="PZL-bg-wNz" firstAttribute="top" secondItem="7Ov-6q-hod" secondAttribute="top" id="pKt-Ih-gRJ"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="IEd-6m-R3b" firstAttribute="height" secondItem="7Ov-6q-hod" secondAttribute="height" id="6rw-GF-pz7"/>
                                     <constraint firstItem="fDO-Ke-fxX" firstAttribute="height" secondItem="7Ov-6q-hod" secondAttribute="height" id="DTl-9r-g72"/>
-                                    <constraint firstItem="I7c-zU-sFw" firstAttribute="height" secondItem="7Ov-6q-hod" secondAttribute="height" id="VCL-Ba-WqM"/>
+                                    <constraint firstItem="I7c-zU-sFw" firstAttribute="height" relation="greaterThanOrEqual" secondItem="fDO-Ke-fxX" secondAttribute="height" id="rgW-pf-RFF"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -499,6 +514,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bannerView" destination="PZL-bg-wNz" id="7e0-uT-QVl"/>
                         <outlet property="multipleSoundsSwitch" destination="APq-iN-OTK" id="ClZ-Xf-s3y"/>
                         <outlet property="timerLabel" destination="YBP-PI-LUr" id="ImI-nW-0dh"/>
                         <outletCollection property="buttonArray" destination="moh-WY-GdR" collectionClass="NSMutableArray" id="D0v-QV-kdt"/>
@@ -516,6 +532,11 @@
                         <outletCollection property="buttonArray" destination="4aF-J7-xzk" collectionClass="NSMutableArray" id="jXX-lD-gef"/>
                         <outletCollection property="buttonArray" destination="pgA-Ca-J8G" collectionClass="NSMutableArray" id="RGB-d4-H0N"/>
                         <outletCollection property="buttonArray" destination="d51-fg-rX4" collectionClass="NSMutableArray" id="55g-Dr-JmF"/>
+                        <outletCollection property="timmerButtonArray" destination="zpg-1w-2h5" collectionClass="NSMutableArray" id="kdF-bd-rV8"/>
+                        <outletCollection property="timmerButtonArray" destination="3GH-Lt-6Z2" collectionClass="NSMutableArray" id="ZaJ-eC-ZqK"/>
+                        <outletCollection property="timmerButtonArray" destination="C9K-nw-6zL" collectionClass="NSMutableArray" id="akR-uI-0Yc"/>
+                        <outletCollection property="timmerButtonArray" destination="KcL-ST-ad0" collectionClass="NSMutableArray" id="fLm-9t-mFk"/>
+                        <outletCollection property="timmerButtonArray" destination="5Th-Dg-Kbx" collectionClass="NSMutableArray" id="TNn-h5-3NL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

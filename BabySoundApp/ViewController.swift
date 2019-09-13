@@ -10,6 +10,7 @@
 
 import UIKit
 import AVFoundation
+import GoogleMobileAds
 
 class ViewController: UIViewController {
 
@@ -19,12 +20,16 @@ class ViewController: UIViewController {
     var soundStopped: AVAudioPlayer?
     var multipleSounds: [AVAudioPlayer] = []
     var soundArray = ["babyMobileNoise", "wombNoise", "whiteNoise", "dryerNoise", "fanNoise", "hairdryerNoise", "carNoise", "airplaneNoise", "trainNoise", "oceanNoise", "natureNoise", "fireNoise", "stormNoise", "rainNoise", "showerNoise"]
+    var adUintId = ""
     
     
     // IBOutlets
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet var buttonArray: [UIButton]!
     @IBOutlet weak var multipleSoundsSwitch: UISwitch!
+    @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet var timmerButtonArray: [UIButton]!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +39,17 @@ class ViewController: UIViewController {
         
         // Setup the timer
         setupTimer()
+        
+        // Setup the add banner
+        // Banner ID
+        bannerView.adUnitID = adUintId
+        // Set the root view controller of the banner
+        bannerView.rootViewController = self
+        // Init the load request
+        bannerView.load(GADRequest())
+        
+        // Set the delegate
+        bannerView.delegate = self
         
     }
     
@@ -230,6 +246,17 @@ class ViewController: UIViewController {
 
     @IBAction func timeButtonTapped(_ sender: UIButton) {
         
+        // MAke only the selected button have a border
+        for button in timmerButtonArray {
+            
+            if button.layer.borderWidth == 3 {
+                button.layer.borderWidth = 0
+            } else if button.tag == sender.tag {
+                button.layer.borderWidth = 3
+            }
+            
+        }
+        
         // Setup the timer if any was invalidated
         if timer == nil {
             setupTimer()
@@ -347,3 +374,18 @@ class ViewController: UIViewController {
     
 } // End class
 
+//=============================
+// MARK: - BannerView extension
+//=============================
+
+extension ViewController: GADBannerViewDelegate {
+    
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("recived ad")
+    }
+    
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        print(error)
+    }
+    
+} // End the extension
