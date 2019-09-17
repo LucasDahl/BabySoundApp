@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		95795AB323316DA40064A82C /* MainWatch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95795AB223316DA40064A82C /* MainWatch.storyboard */; };
-		95795AB523316DFE0064A82C /* WatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95795AB423316DFE0064A82C /* WatchController.swift */; };
+		95795B022331708A0064A82C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95795B002331708A0064A82C /* Interface.storyboard */; };
+		95795B042331708A0064A82C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95795B032331708A0064A82C /* Assets.xcassets */; };
+		95795B0B2331708A0064A82C /* WatchVolume Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 95795B0A2331708A0064A82C /* WatchVolume Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		95795B102331708A0064A82C /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95795B0F2331708A0064A82C /* InterfaceController.swift */; };
+		95795B122331708A0064A82C /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95795B112331708A0064A82C /* ExtensionDelegate.swift */; };
+		95795B142331708A0064A82C /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95795B132331708A0064A82C /* NotificationController.swift */; };
+		95795B162331708B0064A82C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95795B152331708B0064A82C /* Assets.xcassets */; };
+		95795B1B2331708B0064A82C /* WatchVolume.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 95795AFE2331708A0064A82C /* WatchVolume.app */; };
 		95A70BC0232832B90081DC58 /* stormNoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95A70BBF232832B90081DC58 /* stormNoise.wav */; };
 		95D81C96232C9FFA00341770 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 95D81C95232C9FFA00341770 /* README.md */; };
 		95D9B6A222FF7FB0004E4BA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9B6A122FF7FB0004E4BA4 /* AppDelegate.swift */; };
@@ -33,12 +39,63 @@
 		9BEAD8F259A47299CE84B29E /* Pods_BabySoundApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FFBD977F5639F7712FB6857 /* Pods_BabySoundApp.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		95795B0C2331708A0064A82C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95D9B69622FF7FAF004E4BA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95795B092331708A0064A82C;
+			remoteInfo = "WatchVolume Extension";
+		};
+		95795B192331708B0064A82C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95D9B69622FF7FAF004E4BA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95795AFD2331708A0064A82C;
+			remoteInfo = WatchVolume;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		95795B212331708B0064A82C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				95795B0B2331708A0064A82C /* WatchVolume Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95795B232331708B0064A82C /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				95795B1B2331708B0064A82C /* WatchVolume.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0FFBD977F5639F7712FB6857 /* Pods_BabySoundApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabySoundApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FE5021D1C5485AE54EC00A /* Pods-BabySoundApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabySoundApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabySoundApp/Pods-BabySoundApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7D88DCFBA5835C5B664A1EC4 /* Pods-BabySoundApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabySoundApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabySoundApp/Pods-BabySoundApp.release.xcconfig"; sourceTree = "<group>"; };
-		95795AB223316DA40064A82C /* MainWatch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainWatch.storyboard; sourceTree = "<group>"; };
-		95795AB423316DFE0064A82C /* WatchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchController.swift; sourceTree = "<group>"; };
+		95795AFE2331708A0064A82C /* WatchVolume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchVolume.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		95795B012331708A0064A82C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		95795B032331708A0064A82C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95795B052331708A0064A82C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95795B0A2331708A0064A82C /* WatchVolume Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchVolume Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95795B0F2331708A0064A82C /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		95795B112331708A0064A82C /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		95795B132331708A0064A82C /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		95795B152331708B0064A82C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95795B172331708B0064A82C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95795B182331708B0064A82C /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		95A70BBF232832B90081DC58 /* stormNoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stormNoise.wav; sourceTree = "<group>"; };
 		95D81C95232C9FFA00341770 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		95D9B69E22FF7FB0004E4BA4 /* BabySoundApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabySoundApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +122,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		95795B072331708A0064A82C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95D9B69B22FF7FAF004E4BA4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -85,19 +149,35 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		95795AB123316CCE0064A82C /* Watch */ = {
+		95795AFF2331708A0064A82C /* WatchVolume */ = {
 			isa = PBXGroup;
 			children = (
-				95795AB423316DFE0064A82C /* WatchController.swift */,
-				95795AB223316DA40064A82C /* MainWatch.storyboard */,
+				95795B002331708A0064A82C /* Interface.storyboard */,
+				95795B032331708A0064A82C /* Assets.xcassets */,
+				95795B052331708A0064A82C /* Info.plist */,
 			);
-			path = Watch;
+			path = WatchVolume;
+			sourceTree = "<group>";
+		};
+		95795B0E2331708A0064A82C /* WatchVolume Extension */ = {
+			isa = PBXGroup;
+			children = (
+				95795B0F2331708A0064A82C /* InterfaceController.swift */,
+				95795B112331708A0064A82C /* ExtensionDelegate.swift */,
+				95795B132331708A0064A82C /* NotificationController.swift */,
+				95795B152331708B0064A82C /* Assets.xcassets */,
+				95795B172331708B0064A82C /* Info.plist */,
+				95795B182331708B0064A82C /* PushNotificationPayload.apns */,
+			);
+			path = "WatchVolume Extension";
 			sourceTree = "<group>";
 		};
 		95D9B69522FF7FAF004E4BA4 = {
 			isa = PBXGroup;
 			children = (
 				95D9B6A022FF7FB0004E4BA4 /* BabySoundApp */,
+				95795AFF2331708A0064A82C /* WatchVolume */,
+				95795B0E2331708A0064A82C /* WatchVolume Extension */,
 				95D9B69F22FF7FB0004E4BA4 /* Products */,
 				3A032A5791FD5C805C6F35AF /* Pods */,
 				C8CC2003D97D8C3C57290A2A /* Frameworks */,
@@ -108,6 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				95D9B69E22FF7FB0004E4BA4 /* BabySoundApp.app */,
+				95795AFE2331708A0064A82C /* WatchVolume.app */,
+				95795B0A2331708A0064A82C /* WatchVolume Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,7 +200,6 @@
 				95D9B6A122FF7FB0004E4BA4 /* AppDelegate.swift */,
 				95D9B6A322FF7FB0004E4BA4 /* ViewController.swift */,
 				95D9B6A522FF7FB0004E4BA4 /* Main.storyboard */,
-				95795AB123316CCE0064A82C /* Watch */,
 				95F8E84123229CB200F6D76E /* Sounds */,
 				95D9B6A822FF7FB1004E4BA4 /* Assets.xcassets */,
 				95D9B6AA22FF7FB1004E4BA4 /* LaunchScreen.storyboard */,
@@ -161,6 +242,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		95795AFD2331708A0064A82C /* WatchVolume */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95795B222331708B0064A82C /* Build configuration list for PBXNativeTarget "WatchVolume" */;
+			buildPhases = (
+				95795AFC2331708A0064A82C /* Resources */,
+				95795B212331708B0064A82C /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95795B0D2331708A0064A82C /* PBXTargetDependency */,
+			);
+			name = WatchVolume;
+			productName = WatchVolume;
+			productReference = 95795AFE2331708A0064A82C /* WatchVolume.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		95795B092331708A0064A82C /* WatchVolume Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95795B202331708B0064A82C /* Build configuration list for PBXNativeTarget "WatchVolume Extension" */;
+			buildPhases = (
+				95795B062331708A0064A82C /* Sources */,
+				95795B072331708A0064A82C /* Frameworks */,
+				95795B082331708A0064A82C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WatchVolume Extension";
+			productName = "WatchVolume Extension";
+			productReference = 95795B0A2331708A0064A82C /* WatchVolume Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		95D9B69D22FF7FAF004E4BA4 /* BabySoundApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95D9B6B022FF7FB1004E4BA4 /* Build configuration list for PBXNativeTarget "BabySoundApp" */;
@@ -170,10 +285,12 @@
 				95D9B69B22FF7FAF004E4BA4 /* Frameworks */,
 				95D9B69C22FF7FAF004E4BA4 /* Resources */,
 				95EF18805AF66A69DFC55B55 /* [CP] Embed Pods Frameworks */,
+				95795B232331708B0064A82C /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				95795B1A2331708B0064A82C /* PBXTargetDependency */,
 			);
 			name = BabySoundApp;
 			productName = BabySoundApp;
@@ -190,6 +307,12 @@
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Lucas Dahl";
 				TargetAttributes = {
+					95795AFD2331708A0064A82C = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					95795B092331708A0064A82C = {
+						CreatedOnToolsVersion = 10.3;
+					};
 					95D9B69D22FF7FAF004E4BA4 = {
 						CreatedOnToolsVersion = 10.3;
 						SystemCapabilities = {
@@ -214,11 +337,30 @@
 			projectRoot = "";
 			targets = (
 				95D9B69D22FF7FAF004E4BA4 /* BabySoundApp */,
+				95795AFD2331708A0064A82C /* WatchVolume */,
+				95795B092331708A0064A82C /* WatchVolume Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		95795AFC2331708A0064A82C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95795B042331708A0064A82C /* Assets.xcassets in Resources */,
+				95795B022331708A0064A82C /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95795B082331708A0064A82C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95795B162331708B0064A82C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95D9B69C22FF7FAF004E4BA4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -238,7 +380,6 @@
 				95F8E85B23229DDC00F6D76E /* babyMobileNoise.wav in Resources */,
 				95D81C96232C9FFA00341770 /* README.md in Resources */,
 				95F8E85A23229DDC00F6D76E /* natureNoise.wav in Resources */,
-				95795AB323316DA40064A82C /* MainWatch.storyboard in Resources */,
 				95F8E85223229DDC00F6D76E /* oceanNoise.wav in Resources */,
 				95D9B6A722FF7FB0004E4BA4 /* Main.storyboard in Resources */,
 				95F8E85123229DDC00F6D76E /* carNoise.wav in Resources */,
@@ -290,19 +431,49 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		95795B062331708A0064A82C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95795B142331708A0064A82C /* NotificationController.swift in Sources */,
+				95795B122331708A0064A82C /* ExtensionDelegate.swift in Sources */,
+				95795B102331708A0064A82C /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95D9B69A22FF7FAF004E4BA4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				95D9B6A422FF7FB0004E4BA4 /* ViewController.swift in Sources */,
-				95795AB523316DFE0064A82C /* WatchController.swift in Sources */,
 				95D9B6A222FF7FB0004E4BA4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		95795B0D2331708A0064A82C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95795B092331708A0064A82C /* WatchVolume Extension */;
+			targetProxy = 95795B0C2331708A0064A82C /* PBXContainerItemProxy */;
+		};
+		95795B1A2331708B0064A82C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95795AFD2331708A0064A82C /* WatchVolume */;
+			targetProxy = 95795B192331708B0064A82C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		95795B002331708A0064A82C /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95795B012331708A0064A82C /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		95D9B6A522FF7FB0004E4BA4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -322,6 +493,88 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		95795B1C2331708B0064A82C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CW7RK4BNJW;
+				IBSC_MODULE = WatchVolume_Extension;
+				INFOPLIST_FILE = WatchVolume/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lucas.BabySoundApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Debug;
+		};
+		95795B1D2331708B0064A82C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CW7RK4BNJW;
+				IBSC_MODULE = WatchVolume_Extension;
+				INFOPLIST_FILE = WatchVolume/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lucas.BabySoundApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Release;
+		};
+		95795B1E2331708B0064A82C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CW7RK4BNJW;
+				INFOPLIST_FILE = "WatchVolume Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lucas.BabySoundApp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Debug;
+		};
+		95795B1F2331708B0064A82C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CW7RK4BNJW;
+				INFOPLIST_FILE = "WatchVolume Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lucas.BabySoundApp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Release;
+		};
 		95D9B6AE22FF7FB1004E4BA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -479,6 +732,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		95795B202331708B0064A82C /* Build configuration list for PBXNativeTarget "WatchVolume Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95795B1E2331708B0064A82C /* Debug */,
+				95795B1F2331708B0064A82C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95795B222331708B0064A82C /* Build configuration list for PBXNativeTarget "WatchVolume" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95795B1C2331708B0064A82C /* Debug */,
+				95795B1D2331708B0064A82C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		95D9B69922FF7FAF004E4BA4 /* Build configuration list for PBXProject "BabySoundApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

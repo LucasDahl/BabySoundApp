@@ -15,6 +15,7 @@
 import UIKit
 import AVFoundation
 import GoogleMobileAds
+import WatchConnectivity
 
 class ViewController: UIViewController {
 
