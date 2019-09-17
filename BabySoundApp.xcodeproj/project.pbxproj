@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95795AB323316DA40064A82C /* MainWatch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95795AB223316DA40064A82C /* MainWatch.storyboard */; };
+		95795AB523316DFE0064A82C /* WatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95795AB423316DFE0064A82C /* WatchController.swift */; };
 		95A70BC0232832B90081DC58 /* stormNoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95A70BBF232832B90081DC58 /* stormNoise.wav */; };
 		95D81C96232C9FFA00341770 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 95D81C95232C9FFA00341770 /* README.md */; };
 		95D9B6A222FF7FB0004E4BA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9B6A122FF7FB0004E4BA4 /* AppDelegate.swift */; };
@@ -35,6 +37,8 @@
 		0FFBD977F5639F7712FB6857 /* Pods_BabySoundApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BabySoundApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FE5021D1C5485AE54EC00A /* Pods-BabySoundApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabySoundApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabySoundApp/Pods-BabySoundApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7D88DCFBA5835C5B664A1EC4 /* Pods-BabySoundApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabySoundApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabySoundApp/Pods-BabySoundApp.release.xcconfig"; sourceTree = "<group>"; };
+		95795AB223316DA40064A82C /* MainWatch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainWatch.storyboard; sourceTree = "<group>"; };
+		95795AB423316DFE0064A82C /* WatchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchController.swift; sourceTree = "<group>"; };
 		95A70BBF232832B90081DC58 /* stormNoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stormNoise.wav; sourceTree = "<group>"; };
 		95D81C95232C9FFA00341770 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		95D9B69E22FF7FB0004E4BA4 /* BabySoundApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabySoundApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +85,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		95795AB123316CCE0064A82C /* Watch */ = {
+			isa = PBXGroup;
+			children = (
+				95795AB423316DFE0064A82C /* WatchController.swift */,
+				95795AB223316DA40064A82C /* MainWatch.storyboard */,
+			);
+			path = Watch;
+			sourceTree = "<group>";
+		};
 		95D9B69522FF7FAF004E4BA4 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +118,7 @@
 				95D9B6A122FF7FB0004E4BA4 /* AppDelegate.swift */,
 				95D9B6A322FF7FB0004E4BA4 /* ViewController.swift */,
 				95D9B6A522FF7FB0004E4BA4 /* Main.storyboard */,
+				95795AB123316CCE0064A82C /* Watch */,
 				95F8E84123229CB200F6D76E /* Sounds */,
 				95D9B6A822FF7FB1004E4BA4 /* Assets.xcassets */,
 				95D9B6AA22FF7FB1004E4BA4 /* LaunchScreen.storyboard */,
@@ -224,6 +238,7 @@
 				95F8E85B23229DDC00F6D76E /* babyMobileNoise.wav in Resources */,
 				95D81C96232C9FFA00341770 /* README.md in Resources */,
 				95F8E85A23229DDC00F6D76E /* natureNoise.wav in Resources */,
+				95795AB323316DA40064A82C /* MainWatch.storyboard in Resources */,
 				95F8E85223229DDC00F6D76E /* oceanNoise.wav in Resources */,
 				95D9B6A722FF7FB0004E4BA4 /* Main.storyboard in Resources */,
 				95F8E85123229DDC00F6D76E /* carNoise.wav in Resources */,
@@ -280,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95D9B6A422FF7FB0004E4BA4 /* ViewController.swift in Sources */,
+				95795AB523316DFE0064A82C /* WatchController.swift in Sources */,
 				95D9B6A222FF7FB0004E4BA4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
