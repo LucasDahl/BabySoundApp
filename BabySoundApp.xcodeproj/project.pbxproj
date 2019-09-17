@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		95A70BC0232832B90081DC58 /* stormNoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95A70BBF232832B90081DC58 /* stormNoise.wav */; };
+		95D81C96232C9FFA00341770 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 95D81C95232C9FFA00341770 /* README.md */; };
 		95D9B6A222FF7FB0004E4BA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9B6A122FF7FB0004E4BA4 /* AppDelegate.swift */; };
 		95D9B6A422FF7FB0004E4BA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9B6A322FF7FB0004E4BA4 /* ViewController.swift */; };
 		95D9B6A722FF7FB0004E4BA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D9B6A522FF7FB0004E4BA4 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		14FE5021D1C5485AE54EC00A /* Pods-BabySoundApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabySoundApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabySoundApp/Pods-BabySoundApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7D88DCFBA5835C5B664A1EC4 /* Pods-BabySoundApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabySoundApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabySoundApp/Pods-BabySoundApp.release.xcconfig"; sourceTree = "<group>"; };
 		95A70BBF232832B90081DC58 /* stormNoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stormNoise.wav; sourceTree = "<group>"; };
+		95D81C95232C9FFA00341770 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		95D9B69E22FF7FB0004E4BA4 /* BabySoundApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabySoundApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D9B6A122FF7FB0004E4BA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95D9B6A322FF7FB0004E4BA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				95D9B6A822FF7FB1004E4BA4 /* Assets.xcassets */,
 				95D9B6AA22FF7FB1004E4BA4 /* LaunchScreen.storyboard */,
 				95D9B6AD22FF7FB1004E4BA4 /* Info.plist */,
+				95D81C95232C9FFA00341770 /* README.md */,
 			);
 			path = BabySoundApp;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				95F8E85423229DDC00F6D76E /* fanNoise.wav in Resources */,
 				95F8E85D23229DDC00F6D76E /* whiteNoise.wav in Resources */,
 				95F8E85B23229DDC00F6D76E /* babyMobileNoise.wav in Resources */,
+				95D81C96232C9FFA00341770 /* README.md in Resources */,
 				95F8E85A23229DDC00F6D76E /* natureNoise.wav in Resources */,
 				95F8E85223229DDC00F6D76E /* oceanNoise.wav in Resources */,
 				95D9B6A722FF7FB0004E4BA4 /* Main.storyboard in Resources */,

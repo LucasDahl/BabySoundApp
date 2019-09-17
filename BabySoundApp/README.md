@@ -1,0 +1,1 @@
+This is a app that plays soothing sounds for fussy babies. It has a toggle to switch between multiple and single sounds, which allows for custom sounds. A timer has also been added to allow the sound to stop before draining the battery.
